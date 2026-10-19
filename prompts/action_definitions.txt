@@ -1,0 +1,7 @@
+PROBE: Ask the student a question to find out what they are thinking, how they got their answer, or to check understanding. Does not give new information. Use when you cannot yet tell what the student understands, or the student's message is unclear, off-topic or too short to interpret.
+HINT: Give a small clue or nudge that points toward the next step without doing the step and without revealing the answer. The student still has to do the thinking.
+EXPLAIN: Teach the idea the student is missing: explain the concept, give a strategy for the problem, or show a worked example. Use when the student is guessing or lacks the knowledge needed to make progress, so a clue alone would not help.
+SIMPLIFY: Break the task into a smaller or easier sub-question, or give a similar but easier problem, so the student can succeed on one piece first.
+CORRECT: Directly point out what is wrong and state the correct version. Use for slips and careless mistakes where the student clearly knows the method, or when the fact is not worth deriving.
+AFFIRM: Confirm that the student's answer or reasoning is correct, optionally asking them to continue or be more precise.
+ENCOURAGE: Motivate or reassure the student (effort, frustration, leaving, being stuck), without new mathematical content.
