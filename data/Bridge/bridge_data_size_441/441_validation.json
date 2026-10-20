@@ -1,0 +1,3127 @@
+[
+  {
+    "history_id": "H_b2635e9ec09b3ca28a04",
+    "lesson_topic": "3.4B.Rounding Whole Numbers",
+    "c_h": [
+      {
+        "turn_id": 101,
+        "role": "tutor",
+        "text": "Here you go, give it a shot."
+      },
+      {
+        "turn_id": 102,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 103,
+        "role": "tutor",
+        "text": "Do you need any hints to solve this one?"
+      },
+      {
+        "turn_id": 104,
+        "role": "student",
+        "text": "142"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_0724ea269dea818d467e",
+        "e_clean": "diagnose",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "That is a good try. Let's review place value. In the number, 142, what number is in the tens place?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_ac8e96fb06fa9c216893",
+        "e_clean": "right-idea",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. Our number is 142.5, and we want to round it to the nearest whole number. Do you know which number we need to look at when rounding to the nearest whole number?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_46e94af25cfc94e4f5a5",
+    "lesson_topic": "4.2A.Comparing Decimals",
+    "c_h": [
+      {
+        "turn_id": 116,
+        "role": "tutor",
+        "text": "Is that picture visible to you?"
+      },
+      {
+        "turn_id": 117,
+        "role": "student",
+        "text": "16.00"
+      },
+      {
+        "turn_id": 118,
+        "role": "tutor",
+        "text": "Is that your final answer,16.00?"
+      },
+      {
+        "turn_id": 119,
+        "role": "student",
+        "text": "uhh yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_48e1d26655b2301041fe",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. If I had some apples and some bananas, and I showed you this:",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "number of apples < number of bananas",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Which do I have more of?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_4d0ab5cf647408a18150",
+        "e_clean": "diagnose",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "If w < 16, what number could w be? There are several answers, you only need to provide one example.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_8d614341cd4315972930",
+    "lesson_topic": "5.3B.Word Problems with Standard Measurement",
+    "c_h": [
+      {
+        "turn_id": 38,
+        "role": "tutor",
+        "text": "We will multiply because we are converting from hours to minutes."
+      },
+      {
+        "turn_id": 39,
+        "role": "tutor",
+        "text": "Now, we need to find the sum of the total number of minutes."
+      },
+      {
+        "turn_id": 40,
+        "role": "tutor",
+        "text": "Do you understand that steps?"
+      },
+      {
+        "turn_id": 41,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_4cd4c03d4ed888ccc159",
+        "e_clean": "imprecise",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ok great! How many minutes are there in 2 hours?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_be20eb64f2e59c8c42be",
+    "lesson_topic": "3.7C.Using Time",
+    "c_h": [
+      {
+        "turn_id": 63,
+        "role": "tutor",
+        "text": "His train ride takes 45 minutes."
+      },
+      {
+        "turn_id": 64,
+        "role": "tutor",
+        "text": "We need to find the latest time Luciano can leave to make it to work by 9:00 am."
+      },
+      {
+        "turn_id": 65,
+        "role": "tutor",
+        "text": "How long is Luciano's train ride?"
+      },
+      {
+        "turn_id": 66,
+        "role": "student",
+        "text": "8: 15"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_36b44b1c65b700871ee5",
+        "e_clean": "imprecise",
+        "z_what_clean": "AFFIRM",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great job! Luciano needs to leave at 8:15 in order to make it to work by 9:00",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_e3fbb29cf0d10cbb82d1",
+        "e_clean": "imprecise",
+        "z_what_clean": "AFFIRM",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Yes, since Luciano's train ride is 45 minutes, he would need to leave at the latest at 8:15. Good thinking!",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_0a95c48e579d6190871c",
+    "lesson_topic": "3.8A.Bar Graphs (Review) - 2",
+    "c_h": [
+      {
+        "turn_id": 35,
+        "role": "student",
+        "text": "april"
+      },
+      {
+        "turn_id": 36,
+        "role": "student",
+        "text": "may"
+      },
+      {
+        "turn_id": 37,
+        "role": "tutor",
+        "text": "Are you done with your answer?"
+      },
+      {
+        "turn_id": 38,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_00811e51103321cbde46",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! But that is incorrect. To find the month with the highest rainfall you want to look at which bar is the highest.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_c8e895839c1c0ff47a30",
+    "lesson_topic": "5.3K.Adding and Subtracting Decimal Numbers",
+    "c_h": [
+      {
+        "turn_id": 16,
+        "role": "tutor",
+        "text": "The question asks for a total, so we will need to add."
+      },
+      {
+        "turn_id": 17,
+        "role": "tutor",
+        "text": "Try to recheck your final answer once again."
+      },
+      {
+        "turn_id": 18,
+        "role": "tutor",
+        "text": "What is the value of  6 + 8?"
+      },
+      {
+        "turn_id": 19,
+        "role": "student",
+        "text": "im done"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_67c952251112d7a55e45",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! Can you explain how you got your answer?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_4ae8e7db75fc226edb43",
+        "e_clean": "imprecise",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "What did you get?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_26fa5998b4910e78cfd0",
+    "lesson_topic": "2.8A.2- and 3-Dimensional Shapes",
+    "c_h": [
+      {
+        "turn_id": 71,
+        "role": "student",
+        "text": "octagon"
+      },
+      {
+        "turn_id": 72,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 73,
+        "role": "tutor",
+        "text": "Are you rechecking the answer?"
+      },
+      {
+        "turn_id": 74,
+        "role": "student",
+        "text": "no"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_0732f1ae064423bac951",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hm, not quite. How many sides does the shape have?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_84799917fdd26bf56b55",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Good try, but octagon is incorrect. How many sides does the shape have?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_b77cb85a5c4b6287d412",
+    "lesson_topic": "2.2B.Expanded Notation (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 13,
+        "role": "tutor",
+        "text": "Go ahead and read the question carefully."
+      },
+      {
+        "turn_id": 14,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 15,
+        "role": "tutor",
+        "text": "What are we asked to find in this question?"
+      },
+      {
+        "turn_id": 16,
+        "role": "student",
+        "text": "928"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_8f3ae0604e87d22d51b6",
+        "e_clean": "imprecise",
+        "z_what_clean": "ENCOURAGE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Yeah, that's it. More precisely, they want us to write the expanded notation for 928",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Do you know what expanded notation is?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_87640514f6787d768185",
+    "lesson_topic": "5.1C.Multiplying Whole Numbers",
+    "c_h": [
+      {
+        "turn_id": 14,
+        "role": "tutor",
+        "text": "No worries."
+      },
+      {
+        "turn_id": 15,
+        "role": "student",
+        "text": "this is how i do it and  i dont know a lot of other ways"
+      },
+      {
+        "turn_id": 16,
+        "role": "tutor",
+        "text": "I can understand. Can you let me know the final answer?"
+      },
+      {
+        "turn_id": 17,
+        "role": "student",
+        "text": "63,968"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_83794eb646080214e67d",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ok that's a great try. Let's work through this. When you multiply two numbers, remember that you need to carry the tens place. So, instead of writing 68, you'll want to carry the 6",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_29c27ec9a5fac8f2c5fb",
+    "lesson_topic": "4.6B.Symmetry",
+    "c_h": [
+      {
+        "turn_id": 103,
+        "role": "tutor",
+        "text": "Here is our next question."
+      },
+      {
+        "turn_id": 104,
+        "role": "tutor",
+        "text": "Read the question carefully."
+      },
+      {
+        "turn_id": 105,
+        "role": "tutor",
+        "text": "What do we want to find in this question?"
+      },
+      {
+        "turn_id": 106,
+        "role": "student",
+        "text": "symmetry"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_741f96d4e96c26676a82",
+        "e_clean": "guess",
+        "z_what_clean": "ENCOURAGE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Nice try! We want to determine the missing length. But you're right that the sides are symmetrical",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_1b1131fa126a4f2d9483",
+    "lesson_topic": "3.6B.Quadrilaterals",
+    "c_h": [
+      {
+        "turn_id": 75,
+        "role": "tutor",
+        "text": "Go ahead and give it a try."
+      },
+      {
+        "turn_id": 76,
+        "role": "student",
+        "text": "Done"
+      },
+      {
+        "turn_id": 77,
+        "role": "tutor",
+        "text": "Is that was your final answer?"
+      },
+      {
+        "turn_id": 78,
+        "role": "student",
+        "text": "YUP"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_40c3dbe9a1d8e2e34f0d",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! Why did you choose rhombus?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_643774914b72e0e07616",
+    "lesson_topic": "4.2D.Rounding",
+    "c_h": [
+      {
+        "turn_id": 31,
+        "role": "tutor",
+        "text": "Here, the value of 6 in the given number is more than 5."
+      },
+      {
+        "turn_id": 32,
+        "role": "tutor",
+        "text": "So, we need to round the value 7."
+      },
+      {
+        "turn_id": 33,
+        "role": "tutor",
+        "text": "Do you have any questions about that part?"
+      },
+      {
+        "turn_id": 34,
+        "role": "student",
+        "text": "millions"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_8352feab1348b63105f4",
+        "e_clean": "guess",
+        "z_what_clean": "ENCOURAGE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ok, ask away!",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_a3d54bb1971c6464812b",
+    "lesson_topic": "5.3C.Multi-Digit Division with Two-Digit Divisors",
+    "c_h": [
+      {
+        "turn_id": 7,
+        "role": "tutor",
+        "text": "Okay."
+      },
+      {
+        "turn_id": 8,
+        "role": "tutor",
+        "text": "Here is our first question."
+      },
+      {
+        "turn_id": 9,
+        "role": "tutor",
+        "text": "What is the value of 10/5?"
+      },
+      {
+        "turn_id": 10,
+        "role": "student",
+        "text": "50"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_61299e88eb1bcb287491",
+        "e_clean": "misinterpret",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Oh, no that's not it. 10 x 5 = 50, but 10 / 5 is something else",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "The / just means division",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "So the question is asking what is 10 divided by 5?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_871fb0e5e07f8617a49f",
+    "lesson_topic": "3.2B.Multiples of Ten",
+    "c_h": [
+      {
+        "turn_id": 31,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 32,
+        "role": "tutor",
+        "text": "Try to figure it out, and I can help you along the way."
+      },
+      {
+        "turn_id": 33,
+        "role": "tutor",
+        "text": "What is the final answer?"
+      },
+      {
+        "turn_id": 34,
+        "role": "student",
+        "text": "90"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_f03ddfc543331787a07d",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Oh, you're pretty close. We want the 8th multiple of 10. Could you type the multiples of 10 up to 100?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_c8bf8b75a14f528f96d9",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Good try! 90 is a multiple of 10. Can you provide another example of a number with a multiple of 10?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_9ea4b55a5ed5e9146a90",
+    "lesson_topic": "7.NS.1b.Adding Rational Numbers",
+    "c_h": [
+      {
+        "turn_id": 101,
+        "role": "tutor",
+        "text": "Please go ahead and read the question carefully."
+      },
+      {
+        "turn_id": 102,
+        "role": "tutor",
+        "text": "Please share the answer."
+      },
+      {
+        "turn_id": 103,
+        "role": "tutor",
+        "text": "Are you there?"
+      },
+      {
+        "turn_id": 104,
+        "role": "student",
+        "text": "aiden and adiel and eliesn and jeremah *****"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_5ab450c4593a8487028c",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! But what operation will we use?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_b0a4bc5d5618edfd584a",
+    "lesson_topic": "4.4G.Estimation",
+    "c_h": [
+      {
+        "turn_id": 92,
+        "role": "tutor",
+        "text": "We are running out of time."
+      },
+      {
+        "turn_id": 93,
+        "role": "tutor",
+        "text": "Please stop doodling on the whiteboard."
+      },
+      {
+        "turn_id": 94,
+        "role": "tutor",
+        "text": "What is your answer to this problem?"
+      },
+      {
+        "turn_id": 95,
+        "role": "student",
+        "text": "500\\\\"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_1a70c8804900c02bba2a",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, no not quite. One trick you can do when adding hundreds is to ignore the zeros at the end when estimating and put them back later",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "For example, could you try 3+3+4?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_aa6b301a5f5f538dfd42",
+    "lesson_topic": "3.1G.Shapes and Area (Review) - 2",
+    "c_h": [
+      {
+        "turn_id": 68,
+        "role": "student",
+        "text": "1/2"
+      },
+      {
+        "turn_id": 69,
+        "role": "student",
+        "text": "2/2"
+      },
+      {
+        "turn_id": 70,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 71,
+        "role": "student",
+        "text": "2/2"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_a085ac4bf65daf8839e5",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, not quite. The question is asking for the area of the rectangle. Do you remember what we need to do to get the area of the rectangle?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_a7c1191a6480f629bf40",
+    "lesson_topic": "3.6B.Quadrilaterals",
+    "c_h": [
+      {
+        "turn_id": 72,
+        "role": "tutor",
+        "text": "This is your first Exit Ticket question."
+      },
+      {
+        "turn_id": 73,
+        "role": "tutor",
+        "text": "Try to solve this question on the whiteboard."
+      },
+      {
+        "turn_id": 74,
+        "role": "tutor",
+        "text": "Is that your final answer, [STUDENT]?"
+      },
+      {
+        "turn_id": 75,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_cfe7fb62900979196967",
+        "e_clean": "no_error",
+        "z_what_clean": "AFFIRM",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "That's correct, well done!",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_710d013279b08dc41c73",
+        "e_clean": "diagnose",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "A quadrilateral is a shape with four sides. Is a rectangle a quadrilateral?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_2662f6f225ea1a4fd01e",
+    "lesson_topic": "4.9A.Converting Units of Measure (Review) - 2",
+    "c_h": [
+      {
+        "turn_id": 44,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 45,
+        "role": "tutor",
+        "text": "Good work."
+      },
+      {
+        "turn_id": 46,
+        "role": "tutor",
+        "text": "What is the product value of 12 and 3?"
+      },
+      {
+        "turn_id": 47,
+        "role": "student",
+        "text": "5"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_591877b2a298cc2fcd21",
+        "e_clean": "guess",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. Could you let me know how you got 5?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_0759380a692680680afe",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "That isn't quite right - can you define what product means?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_72ce9d1f13ca6b12d901",
+    "lesson_topic": "3.6D.Decomposing Figures",
+    "c_h": [
+      {
+        "turn_id": 56,
+        "role": "tutor",
+        "text": "What is the area of the bottom rectangle?"
+      },
+      {
+        "turn_id": 57,
+        "role": "tutor",
+        "text": "That's correct."
+      },
+      {
+        "turn_id": 58,
+        "role": "tutor",
+        "text": "What is the area of the top rectangle?"
+      },
+      {
+        "turn_id": 59,
+        "role": "student",
+        "text": "es 50"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_dfcbf9622a57a3ff79d8",
+        "e_clean": "diagnose",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "That is not correct. Let's work one together. The area is length times width. If the length is 50 and the width is 3, what is the area of the rectangle?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_0d586a1755d07e8b373f",
+        "e_clean": "right-idea",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, not quite. What is the length and the width of the top rectangle?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_d31e87543e94604fbdc7",
+    "lesson_topic": "4.2D.Rounding (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 42,
+        "role": "tutor",
+        "text": "Here is your next question."
+      },
+      {
+        "turn_id": 43,
+        "role": "tutor",
+        "text": "Read the question carefully."
+      },
+      {
+        "turn_id": 44,
+        "role": "tutor",
+        "text": "We to have round 2562 round at nearest 100, not 10?"
+      },
+      {
+        "turn_id": 45,
+        "role": "student",
+        "text": "2662"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_ca1f6ac57431ff2d6343",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "You're on the right track! You are correct that the 5 in the hundreds should be rounded to a 6, but when we round then the answer should be 2600.",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_b49ca8731b160b4bffbb",
+        "e_clean": "right-idea",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "You have the right idea, but when we round there should be zeros after the place value we're rounding to. So for this one it should just be 2600.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_f555193ff4843ffc2078",
+    "lesson_topic": "5.2A.Place Value",
+    "c_h": [
+      {
+        "turn_id": 89,
+        "role": "tutor",
+        "text": "Give it a try."
+      },
+      {
+        "turn_id": 90,
+        "role": "student",
+        "text": "10.01"
+      },
+      {
+        "turn_id": 91,
+        "role": "tutor",
+        "text": "Is that your answer?"
+      },
+      {
+        "turn_id": 92,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_9f85c81a14494a9c0811",
+        "e_clean": "right-idea",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. We're looking to write a number with a 1 in the tenths place.",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Take a look at this place value chart: https://i.etsystatic.com/29493720/r/il/3d8649/4369460039/il_794xN.4369460039_14ar.jpg",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Notice how the tenths is directly to the right of the decimal",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_d208e8daa0171acd2045",
+    "lesson_topic": "4.2A.Place Value",
+    "c_h": [
+      {
+        "turn_id": 57,
+        "role": "tutor",
+        "text": "You got three more points for clean explaination."
+      },
+      {
+        "turn_id": 58,
+        "role": "tutor",
+        "text": "The next one is the exit ticket."
+      },
+      {
+        "turn_id": 59,
+        "role": "tutor",
+        "text": "Recheck it once?"
+      },
+      {
+        "turn_id": 60,
+        "role": "student",
+        "text": "what"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_0d39c48ed59091729171",
+        "e_clean": "misinterpret",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Sorry, it looks like you're close, but you have a small error. Can you recheck?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_c822e86e591f1b58161c",
+    "lesson_topic": "5.7A.Metric Conversions and Word Problems (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 13,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 14,
+        "role": "tutor",
+        "text": "Let's get started."
+      },
+      {
+        "turn_id": 15,
+        "role": "tutor",
+        "text": "What do you know about Metric Conversions?"
+      },
+      {
+        "turn_id": 16,
+        "role": "student",
+        "text": "0.3"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_82d302071413595811ff",
+        "e_clean": "misinterpret",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try - let's talk about how we can convert from kilograms to grams.",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_38863641493d847a6740",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Is that your answer? How did you get that?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_588c8e67def4e6e5d0e6",
+    "lesson_topic": "5.3C.Multi-Digit Division with Two-Digit Divisors",
+    "c_h": [
+      {
+        "turn_id": 68,
+        "role": "tutor",
+        "text": "The value of 22 times 4 is 88."
+      },
+      {
+        "turn_id": 69,
+        "role": "tutor",
+        "text": "Next, we have to subtract the value of 103 - 88."
+      },
+      {
+        "turn_id": 70,
+        "role": "tutor",
+        "text": "What is the value of 103 - 88?"
+      },
+      {
+        "turn_id": 71,
+        "role": "student",
+        "text": "4"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_2f168e50a56fc1c6dd73",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, no that's not it. Since we're focused on learning long division, it's ok to use your calculator for the subtraction part",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Could you try 103 - 88 on your calculator?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_d764325d2f87e1b9ca5f",
+    "lesson_topic": "4.5A.Geometric Lines",
+    "c_h": [
+      {
+        "turn_id": 109,
+        "role": "tutor",
+        "text": "Examples: triangles, rectangles and pentagons."
+      },
+      {
+        "turn_id": 110,
+        "role": "tutor",
+        "text": "An obtuse angle is an angle that is more than 90 degrees."
+      },
+      {
+        "turn_id": 111,
+        "role": "tutor",
+        "text": "What is the name of a 5 sided polygon?"
+      },
+      {
+        "turn_id": 112,
+        "role": "student",
+        "text": "a octogon"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_127f9c181fbf85fd4544",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! An octagon has 8 sides (I remember this by thinking about an octopus having 8 tentacles). The prefix for 5 is pent",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_024cd17ae8ccfd9a3729",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Not quite, that shape has 8 sides. Penta means 5, so what would a 5 sided polygon be called?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_955ffc4f2ade12f71319",
+    "lesson_topic": "5.7A.Word Problems with Standard Measurement",
+    "c_h": [
+      {
+        "turn_id": 49,
+        "role": "tutor",
+        "text": "Please go ahead and Give it your best shot!"
+      },
+      {
+        "turn_id": 50,
+        "role": "tutor",
+        "text": "Good job! Keep going."
+      },
+      {
+        "turn_id": 51,
+        "role": "tutor",
+        "text": "Are you working on this question?"
+      },
+      {
+        "turn_id": 52,
+        "role": "student",
+        "text": "yep is it 8"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_ab46a6795f09734bb00e",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "How many cups are in a quart? You can use your conversion table to help.",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_2115773c567adf57436c",
+        "e_clean": "right-idea",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Nope, not quite. The question is asking for the number of inches in half a foot. Do you remember how many inches are in a foot?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_5ea6e0b0514a9afaa6ad",
+    "lesson_topic": "3.4J.Relating Division to Multiplication",
+    "c_h": [
+      {
+        "turn_id": 113,
+        "role": "tutor",
+        "text": "Definitely, you will find the answers."
+      },
+      {
+        "turn_id": 114,
+        "role": "tutor",
+        "text": "Please read the question carefully."
+      },
+      {
+        "turn_id": 115,
+        "role": "tutor",
+        "text": "Are you working on this question?"
+      },
+      {
+        "turn_id": 116,
+        "role": "student",
+        "text": "336"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_5f1e12923211ba118d0a",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! It looks like you multiplied 56 and 7. However, we want to split 56 into 7 groups.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_a4685b351d67d07f58f9",
+    "lesson_topic": "4.5A.Geometric Lines",
+    "c_h": [
+      {
+        "turn_id": 53,
+        "role": "student",
+        "text": "path"
+      },
+      {
+        "turn_id": 54,
+        "role": "tutor",
+        "text": "It would be described as a curve."
+      },
+      {
+        "turn_id": 55,
+        "role": "tutor",
+        "text": "What would we call the path if it started at one end, but then continued on into space forever?"
+      },
+      {
+        "turn_id": 56,
+        "role": "student",
+        "text": "curve"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_4ae48e2d8ff92722d4f3",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, not quite. Here, take a look at this chart : https://www.onlinemathlearning.com/image-files/lines-line-segments.png",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Let me know if you see something there that fits the definition",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_850ffdc2da02c6be8d7f",
+    "lesson_topic": "4.1G.Prime and Composite Numbers (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 40,
+        "role": "student",
+        "text": "okay"
+      },
+      {
+        "turn_id": 41,
+        "role": "student",
+        "text": "34"
+      },
+      {
+        "turn_id": 42,
+        "role": "tutor",
+        "text": "39 is a prime number or composite number?"
+      },
+      {
+        "turn_id": 43,
+        "role": "student",
+        "text": "prime"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_695a272dc8877db9937e",
+        "e_clean": "right-idea",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, what makes you say prime?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_6a45bc9301a18fa042d5",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Prime numbers are only divisible by itself and 1. Is 3 divisible by 39?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_1d44c51c0a7d8c013edb",
+    "lesson_topic": "4.3E.Dividing Using Equations",
+    "c_h": [
+      {
+        "turn_id": 35,
+        "role": "tutor",
+        "text": "How many times does 2 go into 18?"
+      },
+      {
+        "turn_id": 36,
+        "role": "student",
+        "text": "30"
+      },
+      {
+        "turn_id": 37,
+        "role": "tutor",
+        "text": "Is this your final answer?"
+      },
+      {
+        "turn_id": 38,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_b508653626d4779262af",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! What operation can we use when we use the words \"go into\"?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_7ad04a3c46fbc15c87fe",
+    "lesson_topic": "3.1G.Shapes and Area",
+    "c_h": [
+      {
+        "turn_id": 41,
+        "role": "tutor",
+        "text": "Please have a look at the steps on the board."
+      },
+      {
+        "turn_id": 42,
+        "role": "student",
+        "text": "okay"
+      },
+      {
+        "turn_id": 43,
+        "role": "tutor",
+        "text": "What is the value of 4 times 4?"
+      },
+      {
+        "turn_id": 44,
+        "role": "student",
+        "text": "12"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_b1bdcca0e006e322ddf4",
+        "e_clean": "careless",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "So close! 4x3 is 12. So what would 4x4 be?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_da09c1cabc584c7f7e4f",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! Try to think of 4 groups of 4. How many total would you have?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_32eabb84bfa42e170b2e",
+    "lesson_topic": "5.2A.Decimal Numbers",
+    "c_h": [
+      {
+        "turn_id": 118,
+        "role": "tutor",
+        "text": "Excellent work! Plus 1 point."
+      },
+      {
+        "turn_id": 119,
+        "role": "tutor",
+        "text": "Here comes the question."
+      },
+      {
+        "turn_id": 120,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 121,
+        "role": "student",
+        "text": "0.8"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_31141048b6863c9cfe8b",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Correct! How would we write 0.8 in standard form?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_706dd7fc7b670119a346",
+        "e_clean": "careless",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "You are close! You want to write \"eight hundredths\", but you wrote \"eight tenths\"",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_13c7397fcd5e1d82b0ac",
+    "lesson_topic": "7.1G.Applying Properties of Operations (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 51,
+        "role": "tutor",
+        "text": "Let's move on to the next question."
+      },
+      {
+        "turn_id": 52,
+        "role": "tutor",
+        "text": "Kindly choose the correct answer."
+      },
+      {
+        "turn_id": 53,
+        "role": "tutor",
+        "text": "Are you trying to choose the correct answer?"
+      },
+      {
+        "turn_id": 54,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_21100e29594ff3e4d74d",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hm, that's not it. We're trying to multiply two negative numbers together",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "When we multiply two negative numbers together, the answer will always be a positive number",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_d69723ca215442eb345f",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "What is the correct answer?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_24af74e1bd6050ad9563",
+    "lesson_topic": "3.1G.Shapes and Area (Review) - 2",
+    "c_h": [
+      {
+        "turn_id": 17,
+        "role": "tutor",
+        "text": "I'm not able to hear you."
+      },
+      {
+        "turn_id": 18,
+        "role": "student",
+        "text": "okay"
+      },
+      {
+        "turn_id": 19,
+        "role": "tutor",
+        "text": "How long is the wood the carpenter wants to break into pieces?"
+      },
+      {
+        "turn_id": 20,
+        "role": "student",
+        "text": "2 inches"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_12e111d22b258f436acf",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. Could you let me know how you got 2 inches?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_0670322d4e7e895f2aea",
+    "lesson_topic": "5.3C.Multi-Digit Division with Two-Digit Divisors",
+    "c_h": [
+      {
+        "turn_id": 43,
+        "role": "tutor",
+        "text": "Next, bring the value 1 down and divide 51 by 17."
+      },
+      {
+        "turn_id": 44,
+        "role": "tutor",
+        "text": "What is the product of 17 and 3?"
+      },
+      {
+        "turn_id": 45,
+        "role": "tutor",
+        "text": "Are you working on it?"
+      },
+      {
+        "turn_id": 46,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_72f3dad264d2765344a6",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "For this question, since our main focus is leaning how to divide, you can use a calculator for 17 x 3",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Could you give that a try on the calculator?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_b9ed2d9ef6e64ad57f6d",
+    "lesson_topic": "2.8A.2- and 3-Dimensional Shapes",
+    "c_h": [
+      {
+        "turn_id": 32,
+        "role": "tutor",
+        "text": "Are you working on this question?"
+      },
+      {
+        "turn_id": 33,
+        "role": "student",
+        "text": ""
+      },
+      {
+        "turn_id": 34,
+        "role": "tutor",
+        "text": "How many sides does the figure have?"
+      },
+      {
+        "turn_id": 35,
+        "role": "student",
+        "text": "6"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_b2c721b7e0e67d6157c0",
+        "e_clean": "careless",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Can you number the sides of the shape on the whiteboard?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_c1688e62aa47470f8e6c",
+        "e_clean": "careless",
+        "z_what_clean": "ENCOURAGE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hm, could you take another look?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_5cf863f6715762a9cb87",
+    "lesson_topic": "4.6D.Classify 3D Figures",
+    "c_h": [
+      {
+        "turn_id": 86,
+        "role": "tutor",
+        "text": "Here is your next question."
+      },
+      {
+        "turn_id": 87,
+        "role": "tutor",
+        "text": "Try to solve it."
+      },
+      {
+        "turn_id": 88,
+        "role": "tutor",
+        "text": "What is a vertice?"
+      },
+      {
+        "turn_id": 89,
+        "role": "student",
+        "text": "B"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_352285a75adf2f761ab8",
+        "e_clean": "imprecise",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great job! Can you explain what a vertex is?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_95c26fb7ced038bcc96a",
+    "lesson_topic": "4.7A.Measuring Angles",
+    "c_h": [
+      {
+        "turn_id": 83,
+        "role": "tutor",
+        "text": "Keep going."
+      },
+      {
+        "turn_id": 84,
+        "role": "tutor",
+        "text": "Keep up the good work."
+      },
+      {
+        "turn_id": 85,
+        "role": "tutor",
+        "text": "What is your final answer?"
+      },
+      {
+        "turn_id": 86,
+        "role": "student",
+        "text": "85"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_fb23a45cf5f951070d94",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! Keep in mind that there are two values on the protractor, one for obtuse and one acute. Is this an obtuse or acute angle?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_d6fa0df6adafef29e5a3",
+        "e_clean": "diagnose",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Remember there are two ways to read the protractor, are you sure you used the right set of numbers?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_3bc4196f52d1e1316de7",
+    "lesson_topic": "4.5A.Geometric Lines",
+    "c_h": [
+      {
+        "turn_id": 84,
+        "role": "tutor",
+        "text": "Plus one more point for your justification."
+      },
+      {
+        "turn_id": 85,
+        "role": "tutor",
+        "text": "Go ahead and try to solve this next question."
+      },
+      {
+        "turn_id": 86,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 87,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_9013d993cf8a5ad9729a",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. We're asked to determine whether the lines are parallel, perpendicular, or neither.",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Does it look like these lines will touch?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_67fc2be1b8ed9c0e4b02",
+    "lesson_topic": "5.7A.Metric Conversions and Word Problems",
+    "c_h": [
+      {
+        "turn_id": 47,
+        "role": "tutor",
+        "text": "Here is the first exit ticket."
+      },
+      {
+        "turn_id": 48,
+        "role": "tutor",
+        "text": "Go ahead and give it a shot."
+      },
+      {
+        "turn_id": 49,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 50,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_ffc0a976f8ee0bb90883",
+        "e_clean": "careless",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! But it looks like you made an arithmetic mistake.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_fe7a2412aca67245f171",
+    "lesson_topic": "1.2C.Place Value (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 96,
+        "role": "tutor",
+        "text": "Give it your best shot!"
+      },
+      {
+        "turn_id": 97,
+        "role": "student",
+        "text": "900"
+      },
+      {
+        "turn_id": 98,
+        "role": "tutor",
+        "text": "Is this your final answer?"
+      },
+      {
+        "turn_id": 99,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_fba2e71d890bced6214f",
+        "e_clean": "guess",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "You're very close. This question is asking what number is in the hundreds place. In other words, we're looking for a single digit",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_c2cfc3b775c6d8aa89d5",
+    "lesson_topic": "5.1A.Multiplying Whole Numbers",
+    "c_h": [
+      {
+        "turn_id": 19,
+        "role": "tutor",
+        "text": "Here is the first question."
+      },
+      {
+        "turn_id": 20,
+        "role": "tutor",
+        "text": "We are asked to multiply the value 943 * 76."
+      },
+      {
+        "turn_id": 21,
+        "role": "tutor",
+        "text": "Are you aware of muliplication?"
+      },
+      {
+        "turn_id": 22,
+        "role": "student",
+        "text": "is that right"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_4851b48ab429a1c311db",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try, but the answer is not correct. Try to think as multiplication as an array. So 3 x 5 would be an array with 3 rows and 5 columns",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_8398834f0f5bc2afdc9c",
+    "lesson_topic": "3.4H.Understanding Division",
+    "c_h": [
+      {
+        "turn_id": 36,
+        "role": "tutor",
+        "text": "That is a very good start."
+      },
+      {
+        "turn_id": 37,
+        "role": "tutor",
+        "text": "Nice going."
+      },
+      {
+        "turn_id": 38,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 39,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_b169c6d7a83ab2796b08",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! What does it mean if two people split evenly?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_f2406ccda3f1d41f2c84",
+    "lesson_topic": "3.5D.Unknown Numbers in Division (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 31,
+        "role": "tutor",
+        "text": "Great work!"
+      },
+      {
+        "turn_id": 32,
+        "role": "tutor",
+        "text": "You earned a point for your correct answer."
+      },
+      {
+        "turn_id": 33,
+        "role": "tutor",
+        "text": "Which part of the problem needs to be solved?"
+      },
+      {
+        "turn_id": 34,
+        "role": "student",
+        "text": "4  tims 6"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_bbbb4ae1f014771852d5",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, no not quite. When the problem is set up the way you see it here, it wants the quotient",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Quotient just means the answer to the division problem",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "So for example, if I asked what's 6 / 2, you would say....",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_3853611f693e07e8e33b",
+    "lesson_topic": "4.5A.Geometric Lines",
+    "c_h": [
+      {
+        "turn_id": 97,
+        "role": "tutor",
+        "text": "Let me know when you are done."
+      },
+      {
+        "turn_id": 98,
+        "role": "tutor",
+        "text": "We are running out of time."
+      },
+      {
+        "turn_id": 99,
+        "role": "tutor",
+        "text": "Are you working on the question?"
+      },
+      {
+        "turn_id": 100,
+        "role": "student",
+        "text": "i got it already"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_655d3092e88f353cf8ad",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, not quite. For this one, the answer is B. The lines are parallel because they have the same slope and therefore will never touch",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_a97ac6d1fe24c52d8ba8",
+    "lesson_topic": "2.8A.2- and 3-Dimensional Shapes",
+    "c_h": [
+      {
+        "turn_id": 14,
+        "role": "tutor",
+        "text": "Are you connected with me in the session?"
+      },
+      {
+        "turn_id": 15,
+        "role": "tutor",
+        "text": "Please stop drawing on the whiteboard."
+      },
+      {
+        "turn_id": 16,
+        "role": "tutor",
+        "text": "Would you tell me \"What is Shapes?\""
+      },
+      {
+        "turn_id": 17,
+        "role": "student",
+        "text": "Es una figura que tine lados"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_c5c20126b316942a70c2",
+        "e_clean": "diagnose",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Close, but let's add to that definition! A shape is figure that has lines and angles. Can you give me an example of a shape? What's your favorite shape?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_d1e0b93610d88b1a27bc",
+    "lesson_topic": "2.4B.Addition and Subtraction Within 100",
+    "c_h": [
+      {
+        "turn_id": 68,
+        "role": "tutor",
+        "text": "We need to subtract 6 from 15."
+      },
+      {
+        "turn_id": 69,
+        "role": "student",
+        "text": "oh okay..."
+      },
+      {
+        "turn_id": 70,
+        "role": "tutor",
+        "text": "What is the value of 15 - 6?"
+      },
+      {
+        "turn_id": 71,
+        "role": "student",
+        "text": "it is 11?"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_0a026456ff0c140a42ce",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "You're close! Let's do 24 - 7 on the whiteboard and then you can think about your answer again.",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_0638386499fbca6ead8a",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, almost! Here's how we can know for sure",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "We start at 15 and we need to go down 6. So let's count down 6 numbers from 15",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "14, 13, 12, 11, 10, 9",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_b52f3b3ce1ad6f51a3fd",
+    "lesson_topic": "5.2A.Place Value",
+    "c_h": [
+      {
+        "turn_id": 79,
+        "role": "tutor",
+        "text": "What is the value of 100*100 =?"
+      },
+      {
+        "turn_id": 80,
+        "role": "student",
+        "text": "1,000"
+      },
+      {
+        "turn_id": 81,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 82,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_7323228335b4f34b3037",
+        "e_clean": "right-idea",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. We can break this problem down into smaller steps",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "You know how 10 * 10 = 100?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_85b4bbf90c7f70a011b5",
+        "e_clean": "right-idea",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Can you show your work on the white board?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_aa5ffa027ce6559fcf7a",
+    "lesson_topic": "4.2A.Place Value",
+    "c_h": [
+      {
+        "turn_id": 114,
+        "role": "tutor",
+        "text": "Give it your best shot."
+      },
+      {
+        "turn_id": 115,
+        "role": "student",
+        "text": ""
+      },
+      {
+        "turn_id": 116,
+        "role": "tutor",
+        "text": "Are you working on this question?"
+      },
+      {
+        "turn_id": 117,
+        "role": "student",
+        "text": "si"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_97629825dc05ddecd50b",
+        "e_clean": "diagnose",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Let's review place value. In the number 47298, what number is in the tens place?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_581fab2a1218b031dfcc",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Which place value is the 9 in 925?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_fd8d2e549ad16be5b315",
+    "lesson_topic": "5.2B.Comparing Decimal Numbers",
+    "c_h": [
+      {
+        "turn_id": 98,
+        "role": "tutor",
+        "text": "Did you know the answer?"
+      },
+      {
+        "turn_id": 99,
+        "role": "student",
+        "text": "yes"
+      },
+      {
+        "turn_id": 100,
+        "role": "tutor",
+        "text": "What is your final answer?"
+      },
+      {
+        "turn_id": 101,
+        "role": "student",
+        "text": "19.80"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_7aefd5302232622a223f",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, no not quite. This question is asking us to select the greatest decimal number out of all the options. ",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Could you tell me why you picked 19.80 over 19.9?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_c0265fcb656148871096",
+    "lesson_topic": "4.4D.Multiplying Multi-Digit by One-Digit Numbers",
+    "c_h": [
+      {
+        "turn_id": 9,
+        "role": "student",
+        "text": "there is two"
+      },
+      {
+        "turn_id": 10,
+        "role": "student",
+        "text": "i know all of the answers"
+      },
+      {
+        "turn_id": 11,
+        "role": "tutor",
+        "text": "Is this your final answer?"
+      },
+      {
+        "turn_id": 12,
+        "role": "student",
+        "text": "yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_bbf7c081b1e4e1b30cb2",
+        "e_clean": "diagnose",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Let's try another multiplication problem. What is 23 times 2?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_b1e15c33a021c83a5366",
+        "e_clean": "careless",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, not quite. I notice that you're not writing down the numbers that carry over. If we don't do that, then it's easy to forgot how much was carried over",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Could you try working out the problem again except this time write how much was carried over?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_733409ab8781eb742b9a",
+    "lesson_topic": "4.2A.Place Value",
+    "c_h": [
+      {
+        "turn_id": 15,
+        "role": "tutor",
+        "text": "Let me know once you back to the session."
+      },
+      {
+        "turn_id": 16,
+        "role": "student",
+        "text": "hi"
+      },
+      {
+        "turn_id": 17,
+        "role": "tutor",
+        "text": "What do you know about place value?"
+      },
+      {
+        "turn_id": 18,
+        "role": "student",
+        "text": "it  goes on for every"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_5c48cb95d428ea9881ec",
+        "e_clean": "right-idea",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great! Can you explain a little more what you mean by it goes on for every?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_6b643e3cabb59258f6d9",
+        "e_clean": "diagnose",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Place value is the numerical value that a digit has by virtue of its position in a number. Let's look at the first three place values. Ones, tens and hundreds.",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "in the number 347, 7 is in the ones place, 4 is in the tens place, and 3 is in the hundreds place. ",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "What number is in the ones place if the number is 279?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_063cbce250cd284d58aa",
+    "lesson_topic": "2.8A.2- and 3-Dimensional Shapes",
+    "c_h": [
+      {
+        "turn_id": 93,
+        "role": "tutor",
+        "text": "What is your final answer?"
+      },
+      {
+        "turn_id": 94,
+        "role": "student",
+        "text": "a"
+      },
+      {
+        "turn_id": 95,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 96,
+        "role": "student",
+        "text": "y"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_2185aa2d8fb33e8684aa",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. What makes you think the answer is A?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_64ec81b9315e3200dc1f",
+        "e_clean": "diagnose",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! a is a 2-dimensional shape, but the image is a 3 dimensional shape, because it has height.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_46b652c6af56f3c9bc17",
+    "lesson_topic": "5.5A.Graphing on a Coordinate Grid",
+    "c_h": [
+      {
+        "turn_id": 13,
+        "role": "student",
+        "text": "chat window"
+      },
+      {
+        "turn_id": 14,
+        "role": "tutor",
+        "text": "Thanks for letting me know."
+      },
+      {
+        "turn_id": 15,
+        "role": "tutor",
+        "text": "Is this your final answer?"
+      },
+      {
+        "turn_id": 16,
+        "role": "student",
+        "text": "yes maam"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_877a4f0c9e0fb3e4a119",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "What is the (x,y) pair you are graphing on the grid?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_e872be86da6b5832a856",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! When you plot the point (3, 2) you need to make sure you move in the horizontal direction first. You actually graphed the point (2,3)",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_3a11d39e9d5f381f24c1",
+    "lesson_topic": "5.4H.Volume of Composite Rectangular Prisms",
+    "c_h": [
+      {
+        "turn_id": 24,
+        "role": "tutor",
+        "text": "Great! Plus 1 Point."
+      },
+      {
+        "turn_id": 25,
+        "role": "tutor",
+        "text": "V = 2 x 2 x 13."
+      },
+      {
+        "turn_id": 26,
+        "role": "tutor",
+        "text": "What is 2 x 2 x 13?"
+      },
+      {
+        "turn_id": 27,
+        "role": "student",
+        "text": "49"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_5f4d825584dae6dcc9e2",
+        "e_clean": "careless",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try, but you made an arithmetic mistake. Can you check your work?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_e1d94696308ee37aba2d",
+    "lesson_topic": "3.3A.Fraction Concepts",
+    "c_h": [
+      {
+        "turn_id": 112,
+        "role": "tutor",
+        "text": "+1 point for your try."
+      },
+      {
+        "turn_id": 113,
+        "role": "tutor",
+        "text": "Look at the circle."
+      },
+      {
+        "turn_id": 114,
+        "role": "tutor",
+        "text": "How many circle is divided into equal parts?"
+      },
+      {
+        "turn_id": 115,
+        "role": "student",
+        "text": "7"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_b9e0887bbc95ab7aff79",
+        "e_clean": "misinterpret",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Sorry, I said that wrong.",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "What I meant to say is, the circle is divided into how many equal parts?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_44988d0afdee0c7caa60",
+        "e_clean": "misinterpret",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "So if the circle was a pizza, there would be 7 slices?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_0150b0b6ac672d49b673",
+    "lesson_topic": "3.4A.Subtracting Whole Numbers",
+    "c_h": [
+      {
+        "turn_id": 13,
+        "role": "tutor",
+        "text": "In this question, we have to find the two in 2,453 different from the two in 204,530."
+      },
+      {
+        "turn_id": 14,
+        "role": "student",
+        "text": "yes"
+      },
+      {
+        "turn_id": 15,
+        "role": "tutor",
+        "text": "What is the value of 2 in 2,453?"
+      },
+      {
+        "turn_id": 16,
+        "role": "student",
+        "text": "223"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_12fe94501eea8f66b879",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! Let's think about place value.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_6615ff8d8a1e355355ec",
+    "lesson_topic": "3.6E.Shapes and Area (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 17,
+        "role": "tutor",
+        "text": "I was facing some technical glitch."
+      },
+      {
+        "turn_id": 18,
+        "role": "student",
+        "text": "ya"
+      },
+      {
+        "turn_id": 19,
+        "role": "tutor",
+        "text": "What is area?"
+      },
+      {
+        "turn_id": 20,
+        "role": "student",
+        "text": "spase in side sompthing"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_0216b359a0207091a9f7",
+        "e_clean": "imprecise",
+        "z_what_clean": "AFFIRM",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Yes well done! Area is the 2D space inside something",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_04d91e3196fedf68e940",
+    "lesson_topic": "3.6E.Shapes and Area",
+    "c_h": [
+      {
+        "turn_id": 58,
+        "role": "student",
+        "text": "two????"
+      },
+      {
+        "turn_id": 59,
+        "role": "student",
+        "text": "no three"
+      },
+      {
+        "turn_id": 60,
+        "role": "tutor",
+        "text": "Is that you final answer?"
+      },
+      {
+        "turn_id": 61,
+        "role": "student",
+        "text": "yes??"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_6b678f3c1193dcc9b1aa",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hm, not quite. Could you let me know how you got three?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_e82278d1978e4b7a5649",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "You seem unsure, and that's ok! Let's look at another example. If the sides of the rectangle are 3 and 5, we multiply those together to get the area, which would be 15.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_1a669a9f703a84ed0353",
+    "lesson_topic": "4.3E.Adding and Subtracting Fractions",
+    "c_h": [
+      {
+        "turn_id": 40,
+        "role": "tutor",
+        "text": "Excellent work so far! Keep it up!"
+      },
+      {
+        "turn_id": 41,
+        "role": "tutor",
+        "text": "Please recheck the answer."
+      },
+      {
+        "turn_id": 42,
+        "role": "tutor",
+        "text": "Are you still on the computer?"
+      },
+      {
+        "turn_id": 43,
+        "role": "student",
+        "text": "yes im right what are you talking about"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_ffc0b071aba395d263f9",
+        "e_clean": "right-idea",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Yes, your numerator is correct! However, remember that when we're adding fractions with the same denominator, we keep the denominator the same - we don't add the denominators.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_9515e8154724d4c330f3",
+    "lesson_topic": "6.8D.Areas by Decomposition",
+    "c_h": [
+      {
+        "turn_id": 46,
+        "role": "tutor",
+        "text": "Here is the first question."
+      },
+      {
+        "turn_id": 47,
+        "role": "tutor",
+        "text": "Read the question carefully."
+      },
+      {
+        "turn_id": 48,
+        "role": "tutor",
+        "text": "What are decomposing shapes?"
+      },
+      {
+        "turn_id": 49,
+        "role": "student",
+        "text": "no have 4 angles"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_2de416f15ca5b03d832e",
+        "e_clean": "misinterpret",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! You are correct that none have 4 angles, but what shapes are we breaking the larger shape into?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_26437d4adb30e69b769c",
+    "lesson_topic": "3.4B.Rounding Whole Numbers",
+    "c_h": [
+      {
+        "turn_id": 26,
+        "role": "tutor",
+        "text": "I am glad that you initiated to solve the question."
+      },
+      {
+        "turn_id": 27,
+        "role": "student",
+        "text": "great"
+      },
+      {
+        "turn_id": 28,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 29,
+        "role": "student",
+        "text": "I think"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_4f14a55ca6eeed630cf0",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. This question is asking us to round 18 to the nearest tens. Do you know how to tell whether we need to round up or round down?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_b3b91a7b4443ff3a9bdd",
+    "lesson_topic": "2.2A.Place Value",
+    "c_h": [
+      {
+        "turn_id": 77,
+        "role": "tutor",
+        "text": "The next question has been uploaded on the board."
+      },
+      {
+        "turn_id": 78,
+        "role": "student",
+        "text": "it is b"
+      },
+      {
+        "turn_id": 79,
+        "role": "tutor",
+        "text": "Can you use the whiteboard to justify your answer?"
+      },
+      {
+        "turn_id": 80,
+        "role": "student",
+        "text": "i em done"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_393937f113bb82086dfb",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "So we are looking for the place value of the 5 in 156. Notice how the 5 is the second digit from the right",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Please take a look at this place value chart here: https://mathmonks.com/wp-content/uploads/2022/02/Place-Value-Chart.jpg",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "What does it say for the column that is second from the right?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_c7bc2dbc7b75cd9ea7f6",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "What value is the 3 in the number 4362?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_c3d15208a6ec2924a671",
+    "lesson_topic": "5.3L.Word Problems with Fractions (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 66,
+        "role": "student",
+        "text": "okey"
+      },
+      {
+        "turn_id": 67,
+        "role": "tutor",
+        "text": "Now we have the same denominators so we can subtract the numerators directly."
+      },
+      {
+        "turn_id": 68,
+        "role": "tutor",
+        "text": "What is 25 minus 18?"
+      },
+      {
+        "turn_id": 69,
+        "role": "student",
+        "text": "8"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_655b9aedf726113c118e",
+        "e_clean": "careless",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "You're very close! Could you double check your answer?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_e9df770fd342cf06684e",
+        "e_clean": "careless",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Can you double check that? You can do 8 + 18 and see if you get 25.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_29f724bc2724deb0c0e9",
+    "lesson_topic": "5.2C.Rounding Decimal Numbers",
+    "c_h": [
+      {
+        "turn_id": 25,
+        "role": "tutor",
+        "text": "Good job! Keep going."
+      },
+      {
+        "turn_id": 26,
+        "role": "tutor",
+        "text": "Great effort so far! Keep going."
+      },
+      {
+        "turn_id": 27,
+        "role": "tutor",
+        "text": "Is 0.22000 your final answer?"
+      },
+      {
+        "turn_id": 28,
+        "role": "student",
+        "text": "i am done...yes"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_5d875208a306ecffabe5",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. Could you tell me what number is at the ten thousandths place?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  }
+]

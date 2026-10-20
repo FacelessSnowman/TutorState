@@ -1,0 +1,1060 @@
+[
+  {
+    "history_id": "H_a7aed9194e84f464a8d0",
+    "lesson_topic": "4.1A.Converting Units of Measure (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 12,
+        "role": "tutor",
+        "text": "Thank you for your response."
+      },
+      {
+        "turn_id": 13,
+        "role": "student",
+        "text": "your welcome"
+      },
+      {
+        "turn_id": 14,
+        "role": "tutor",
+        "text": "What is Multiplication?"
+      },
+      {
+        "turn_id": 15,
+        "role": "student",
+        "text": "you times"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_5bbca169291cc9a9a0f1",
+        "e_clean": "imprecise",
+        "z_what_clean": "AFFIRM",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great job!",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_850ffdc2da02c6be8d7f",
+    "lesson_topic": "4.1G.Prime and Composite Numbers (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 40,
+        "role": "student",
+        "text": "okay"
+      },
+      {
+        "turn_id": 41,
+        "role": "student",
+        "text": "34"
+      },
+      {
+        "turn_id": 42,
+        "role": "tutor",
+        "text": "39 is a prime number or composite number?"
+      },
+      {
+        "turn_id": 43,
+        "role": "student",
+        "text": "prime"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_695a272dc8877db9937e",
+        "e_clean": "right-idea",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, what makes you say prime?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_6a45bc9301a18fa042d5",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Prime numbers are only divisible by itself and 1. Is 3 divisible by 39?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_41bba6493494ec85807c",
+    "lesson_topic": "5.6B.Using the Volume Formula",
+    "c_h": [
+      {
+        "turn_id": 45,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 46,
+        "role": "tutor",
+        "text": "The length is 7 units."
+      },
+      {
+        "turn_id": 47,
+        "role": "tutor",
+        "text": "What is the volume formula?"
+      },
+      {
+        "turn_id": 48,
+        "role": "student",
+        "text": "the volume is 14"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_5a5e0b9d01c568d274f8",
+        "e_clean": "right-idea",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hm, not quite. Could you tell me how you got 14?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_2662f6f225ea1a4fd01e",
+    "lesson_topic": "4.9A.Converting Units of Measure (Review) - 2",
+    "c_h": [
+      {
+        "turn_id": 44,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 45,
+        "role": "tutor",
+        "text": "Good work."
+      },
+      {
+        "turn_id": 46,
+        "role": "tutor",
+        "text": "What is the product value of 12 and 3?"
+      },
+      {
+        "turn_id": 47,
+        "role": "student",
+        "text": "5"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_591877b2a298cc2fcd21",
+        "e_clean": "guess",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. Could you let me know how you got 5?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_0759380a692680680afe",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "That isn't quite right - can you define what product means?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_6b3525fa83cda2ec28c1",
+    "lesson_topic": "5.7A.Metric Conversions and Word Problems",
+    "c_h": [
+      {
+        "turn_id": 110,
+        "role": "tutor",
+        "text": "How many centimeters are in meter?"
+      },
+      {
+        "turn_id": 111,
+        "role": "student",
+        "text": "1000"
+      },
+      {
+        "turn_id": 112,
+        "role": "tutor",
+        "text": "Is that your final answer?"
+      },
+      {
+        "turn_id": 113,
+        "role": "student",
+        "text": "yas"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_509fe7eab1660a9710b7",
+        "e_clean": "right-idea",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, not quite. Please take a look at this metric converter chart: https://i.etsystatic.com/29493720/r/il/3d8649/4369460039/il_794xN.4369460039_14ar.jpg",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "You can use this as a reference for this assignment, but please do your best to have it memorized by our next meeting",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_49cfbc4e1d53888d980f",
+    "lesson_topic": "5.4G.Understanding Volume",
+    "c_h": [
+      {
+        "turn_id": 125,
+        "role": "tutor",
+        "text": "Here we need to find the volume of each cube."
+      },
+      {
+        "turn_id": 126,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 127,
+        "role": "tutor",
+        "text": "What is the unit for the volume?"
+      },
+      {
+        "turn_id": 128,
+        "role": "student",
+        "text": "i did it"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_3a13906f45d86a4bb33e",
+        "e_clean": "imprecise",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "What's your final answer?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_dac9422cdb54f56f0386",
+        "e_clean": "misinterpret",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "I think you have the right idea. However, notice that the side of each cube has a length of 1 foot, but the big box that Gregg is putting the cube into has a side length of 3 yards",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "The units are different: feet and yards",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_44a8e370607810fe352b",
+    "lesson_topic": "4.2A.Place Value",
+    "c_h": [
+      {
+        "turn_id": 70,
+        "role": "tutor",
+        "text": "Not to worry, [STUDENT]."
+      },
+      {
+        "turn_id": 71,
+        "role": "student",
+        "text": "okay"
+      },
+      {
+        "turn_id": 72,
+        "role": "tutor",
+        "text": "What is the place value of two in 204,530?"
+      },
+      {
+        "turn_id": 73,
+        "role": "student",
+        "text": "ten millions?"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_8d1c103e8fab822c4fb2",
+        "e_clean": "right-idea",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. Here's how we can know for sure",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Take a look at this place value chart: https://www.shutterstock.com/image-vector/place-value-chart-blank-template-260nw-2023023992.jpg",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "In 204530, notice how the 2 is 6th from the right",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "In the place value chart, what place value is 6th from the left?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_3ed00895fd994360b310",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "2, 0, and 4 are all in the \"thousands\" section. Do you want to try again?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_49a558e36f83a103e7f8",
+    "lesson_topic": "4.5C.Area",
+    "c_h": [
+      {
+        "turn_id": 30,
+        "role": "tutor",
+        "text": "Look at the board."
+      },
+      {
+        "turn_id": 31,
+        "role": "student",
+        "text": "okayyy"
+      },
+      {
+        "turn_id": 32,
+        "role": "tutor",
+        "text": "What is 12+3=?"
+      },
+      {
+        "turn_id": 33,
+        "role": "student",
+        "text": "the Ar is 13"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_61c58c186cc7a57d05f2",
+        "e_clean": "guess",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! Let's try adding the ones place first.",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_fcd681e016623da1cfac",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Let's go step by step. I'm add 12 + 3 because that will give us the entire length of the rectangle.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_4ca112a9115ad14780b4",
+    "lesson_topic": "6.8D.Areas by Decomposition",
+    "c_h": [
+      {
+        "turn_id": 32,
+        "role": "tutor",
+        "text": "Let's continue with the chat widow."
+      },
+      {
+        "turn_id": 33,
+        "role": "tutor",
+        "text": "Here is our first question."
+      },
+      {
+        "turn_id": 34,
+        "role": "tutor",
+        "text": "What is meant by \"area\"?"
+      },
+      {
+        "turn_id": 35,
+        "role": "student",
+        "text": "30ft"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_8e7d6175c61fd6632531",
+        "e_clean": "imprecise",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great job - you seem to be a little ahead of where we are! What is the definition of area?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_0bbe4f538f7fda44c095",
+        "e_clean": "misinterpret",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Oh, we don't need to find the answer to question 1 just yet. It could be 30 square feet, but I haven't calculated it yet.",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Do you know what area means, as a definition? In other words, what would it say if you looked up \"area\" in a dictionary?",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "How much space something takes up",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_3c48886631b160e636ef",
+    "lesson_topic": "4.9A.Converting Units of Measure (Review) - 2",
+    "c_h": [
+      {
+        "turn_id": 45,
+        "role": "tutor",
+        "text": "Please recheck your answer once."
+      },
+      {
+        "turn_id": 46,
+        "role": "tutor",
+        "text": "What is the product of this equation?"
+      },
+      {
+        "turn_id": 47,
+        "role": "tutor",
+        "text": "7*60=?."
+      },
+      {
+        "turn_id": 48,
+        "role": "student",
+        "text": "520"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_4c348b6952d99578e64c",
+        "e_clean": "careless",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hey, I think you have the right idea, but made a small mistake",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Could you try 6 x 7?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_0dbf3858e06bc64ee5fd",
+        "e_clean": "careless",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "That is not correct. Recalculate that problem and use your calculator to check your work.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_a7e6ffdfa6d38bd0937e",
+    "lesson_topic": "5.3K.Decimal Numbers",
+    "c_h": [
+      {
+        "turn_id": 39,
+        "role": "tutor",
+        "text": "I'm here to help you, let me know if you need any help with this question."
+      },
+      {
+        "turn_id": 40,
+        "role": "student",
+        "text": "7.02"
+      },
+      {
+        "turn_id": 41,
+        "role": "tutor",
+        "text": "How do you say 7.02 in words?"
+      },
+      {
+        "turn_id": 42,
+        "role": "student",
+        "text": "7 ones 0 tenths 2 oneths"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_cea837aae7633982d56a",
+        "e_clean": "careless",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Oh you are so close! You're correct about the 7 ones and the 0 tenths. Could you refer to the place value chart I linked earlier to double check the 2?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_d400c0ab4973121e6d84",
+    "lesson_topic": "4.9A.Converting Units of Measure",
+    "c_h": [
+      {
+        "turn_id": 67,
+        "role": "tutor",
+        "text": "I will help you solve this question."
+      },
+      {
+        "turn_id": 68,
+        "role": "tutor",
+        "text": "One pound is equal to 16 ounces."
+      },
+      {
+        "turn_id": 69,
+        "role": "tutor",
+        "text": "So, how many ounces are equal to 12 pounds?"
+      },
+      {
+        "turn_id": 70,
+        "role": "student",
+        "text": "4"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_0f9308a9e684281246bc",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Let's work this together. If there are 16 ounces in one pound, how many ounces are in two pounds? We add 16 + 16 to find the answer. What is your answer?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_4bed2d35d641a3733f35",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try!",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "How many ounces are in one pound?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_db79e2f25b935b3128aa",
+    "lesson_topic": "2.9A.Measuring Length",
+    "c_h": [
+      {
+        "turn_id": 33,
+        "role": "tutor",
+        "text": "Yes correct ."
+      },
+      {
+        "turn_id": 34,
+        "role": "tutor",
+        "text": "The other end of the crayon is at 4, which means the other end of the crayon      is at 4 centimeters."
+      },
+      {
+        "turn_id": 35,
+        "role": "tutor",
+        "text": "What is the value of                 4 centimeters  - 0 centimeters ?"
+      },
+      {
+        "turn_id": 36,
+        "role": "student",
+        "text": "40"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_359ff8ff7d0b62e38593",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Remember 0 cm represents no distance so if you have a length of 4 cm and take away 0 from it, what's left?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_13230b7353284dba8c02",
+        "e_clean": "misinterpret",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hm, not quite. Our goal is to figure out how long the crayon is. Do you know how long the crayon is?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_7ad04a3c46fbc15c87fe",
+    "lesson_topic": "3.1G.Shapes and Area",
+    "c_h": [
+      {
+        "turn_id": 41,
+        "role": "tutor",
+        "text": "Please have a look at the steps on the board."
+      },
+      {
+        "turn_id": 42,
+        "role": "student",
+        "text": "okay"
+      },
+      {
+        "turn_id": 43,
+        "role": "tutor",
+        "text": "What is the value of 4 times 4?"
+      },
+      {
+        "turn_id": 44,
+        "role": "student",
+        "text": "12"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_b1bdcca0e006e322ddf4",
+        "e_clean": "careless",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "So close! 4x3 is 12. So what would 4x4 be?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_da09c1cabc584c7f7e4f",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! Try to think of 4 groups of 4. How many total would you have?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_042799a6dfc33b695a6d",
+    "lesson_topic": "6.2E.Dividing Fractions",
+    "c_h": [
+      {
+        "turn_id": 85,
+        "role": "student",
+        "text": "is that right?"
+      },
+      {
+        "turn_id": 86,
+        "role": "student",
+        "text": "im not sure"
+      },
+      {
+        "turn_id": 87,
+        "role": "tutor",
+        "text": "What is the product of 6 and 2?"
+      },
+      {
+        "turn_id": 88,
+        "role": "student",
+        "text": "3"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_a576bd26c6399825f2a6",
+        "e_clean": "right-idea",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! It looks like you divided 6 by 2. When we say \"product\" we mean to multiply.",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_7917f8bef7a351e343b4",
+        "e_clean": "misinterpret",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, close. Product means multiplication. In other words, what is 6 x 2?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_740ff4e2087de8d794fc",
+    "lesson_topic": "5.3A.Multi-Digit Division with Two-Digit Divisors",
+    "c_h": [
+      {
+        "turn_id": 80,
+        "role": "tutor",
+        "text": "Have a look at the whiteboard."
+      },
+      {
+        "turn_id": 81,
+        "role": "student",
+        "text": "alright"
+      },
+      {
+        "turn_id": 82,
+        "role": "tutor",
+        "text": "How many times does 15 go into 45?"
+      },
+      {
+        "turn_id": 83,
+        "role": "student",
+        "text": "1"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_0399174b25cbc2adde87",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! When 15 goes into 45 you want to see how many groups of 15 you can make from 45",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_71639b5a592dfe02c8c3",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Let's try to solve this problem together. There are 3 groups of 15 that go into 45. We check our answers by multiplying 15 times 3, which is 45. Do you understand?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_7de6bb3a4d3b009c68fd",
+    "lesson_topic": "3.4B.Rounding Whole Numbers",
+    "c_h": [
+      {
+        "turn_id": 43,
+        "role": "tutor",
+        "text": "Let us move to the next question."
+      },
+      {
+        "turn_id": 44,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 45,
+        "role": "tutor",
+        "text": "When rounding to the nearest 100, what numbers will be in the 10s and units digit positions?"
+      },
+      {
+        "turn_id": 46,
+        "role": "student",
+        "text": "51"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_bb0a4e13a4ce58d9b93f",
+        "e_clean": "diagnose",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "That was a good try, but that answer is not correct. When we look at the number 329, the 2 is in the tens place and the 9 is in the ones place. Do you understand? ",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_90588931db0ce0c31679",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, not quite. Those are the numbers in the hundreds and tens positions. In the number 8510, the 5 is the hundreds place value and the 1 is the tens place value",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_ce6e48fc427fc300e4c7",
+    "lesson_topic": "4.6A.Geometric Lines (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 74,
+        "role": "tutor",
+        "text": "Which angle appears to be an acute angle?"
+      },
+      {
+        "turn_id": 75,
+        "role": "tutor",
+        "text": "Try to solve it on the whiteboard."
+      },
+      {
+        "turn_id": 76,
+        "role": "tutor",
+        "text": "What is obtuse angle?"
+      },
+      {
+        "turn_id": 77,
+        "role": "student",
+        "text": "abov 90"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_d128cfa6f53934a26c7f",
+        "e_clean": "imprecise",
+        "z_what_clean": "AFFIRM",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Yes, that's right!",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "An obtuse angle is an angle that is greater than 90 degrees but less than 180 degrees",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_468fc37506543cbed48b",
+        "e_clean": "diagnose",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "An acute angle is an angle less than 90 degrees and an obtuse angle is greater than 90 degrees. Is 145 an acute or obtuse angle?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_81c5572a47405fb7de20",
+    "lesson_topic": "2.2C.Counting Numbers",
+    "c_h": [
+      {
+        "turn_id": 57,
+        "role": "tutor",
+        "text": "But it looks like your answer is incorrect."
+      },
+      {
+        "turn_id": 58,
+        "role": "tutor",
+        "text": "Ok. Do you mind stopping that so we can really focus on the lesson?"
+      },
+      {
+        "turn_id": 59,
+        "role": "tutor",
+        "text": "What is the value of 549 + 10?"
+      },
+      {
+        "turn_id": 60,
+        "role": "student",
+        "text": "590"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_a80d03e510c4257eab47",
+        "e_clean": "guess",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! What is 49 + 10?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_87ebb4accaf20568d5cc",
+    "lesson_topic": "4.4A.Addition and Subtraction Word Problems",
+    "c_h": [
+      {
+        "turn_id": 38,
+        "role": "tutor",
+        "text": "We need to subtract total windows from the windows washed by lucy and Kevin."
+      },
+      {
+        "turn_id": 39,
+        "role": "tutor",
+        "text": "We need to subtract 24 from 15."
+      },
+      {
+        "turn_id": 40,
+        "role": "tutor",
+        "text": "What is the value of 24-15?"
+      },
+      {
+        "turn_id": 41,
+        "role": "student",
+        "text": "11"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_b8ea5fb43cc1f35ea62b",
+        "e_clean": "guess",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Let's work through this together. We first subtract the ones place. Can you take 5 from 4?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_3a11d39e9d5f381f24c1",
+    "lesson_topic": "5.4H.Volume of Composite Rectangular Prisms",
+    "c_h": [
+      {
+        "turn_id": 24,
+        "role": "tutor",
+        "text": "Great! Plus 1 Point."
+      },
+      {
+        "turn_id": 25,
+        "role": "tutor",
+        "text": "V = 2 x 2 x 13."
+      },
+      {
+        "turn_id": 26,
+        "role": "tutor",
+        "text": "What is 2 x 2 x 13?"
+      },
+      {
+        "turn_id": 27,
+        "role": "student",
+        "text": "49"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_5f4d825584dae6dcc9e2",
+        "e_clean": "careless",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try, but you made an arithmetic mistake. Can you check your work?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1061 @@
+[
+  {
+    "history_id": "H_eec4a98f68690bddf262",
+    "lesson_topic": "4.6D.Classifying 2D Figures",
+    "c_h": [
+      {
+        "turn_id": 23,
+        "role": "tutor",
+        "text": "A quadrilateral is a shape with four sides."
+      },
+      {
+        "turn_id": 24,
+        "role": "tutor",
+        "text": "Since both drawings are quadrilaterals, they both have four sides and four angles."
+      },
+      {
+        "turn_id": 25,
+        "role": "tutor",
+        "text": "What is a rectangle?"
+      },
+      {
+        "turn_id": 26,
+        "role": "student",
+        "text": "done"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_a51e0e5b41950de7f246",
+        "e_clean": "diagnose",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try - you should talk about the parallel sides.",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_7926e1d9cef59c3189a7",
+        "e_clean": "diagnose",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "A rectangle has two equal sides and two equal angles. That's the difference between rectangles and other quadrilaterals. ",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_d764325d2f87e1b9ca5f",
+    "lesson_topic": "4.5A.Geometric Lines",
+    "c_h": [
+      {
+        "turn_id": 109,
+        "role": "tutor",
+        "text": "Examples: triangles, rectangles and pentagons."
+      },
+      {
+        "turn_id": 110,
+        "role": "tutor",
+        "text": "An obtuse angle is an angle that is more than 90 degrees."
+      },
+      {
+        "turn_id": 111,
+        "role": "tutor",
+        "text": "What is the name of a 5 sided polygon?"
+      },
+      {
+        "turn_id": 112,
+        "role": "student",
+        "text": "a octogon"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_127f9c181fbf85fd4544",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! An octagon has 8 sides (I remember this by thinking about an octopus having 8 tentacles). The prefix for 5 is pent",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_024cd17ae8ccfd9a3729",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Not quite, that shape has 8 sides. Penta means 5, so what would a 5 sided polygon be called?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_f4e67e39c2b75d00bfd4",
+    "lesson_topic": "6.2E.Dividing Fractions",
+    "c_h": [
+      {
+        "turn_id": 54,
+        "role": "tutor",
+        "text": "Sounds good."
+      },
+      {
+        "turn_id": 55,
+        "role": "tutor",
+        "text": "When dividing with fractions, the whole number must be changed into a fraction."
+      },
+      {
+        "turn_id": 56,
+        "role": "tutor",
+        "text": "How can the problem be written changing 20 to a fraction?"
+      },
+      {
+        "turn_id": 57,
+        "role": "student",
+        "text": "20 over 100"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_c5c4e38df2d7e6f5d4a3",
+        "e_clean": "misinterpret",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Sorry, what I meant to say is that we need to change any mixed number into an improper fraction. Do you see how there's a 20 in front of the 2/5?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_ab89daba72d4768737ad",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try. When we want to change a whole number into a fraction we do not want to change it's value.",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_aa3b94077d35f79664d1",
+    "lesson_topic": "5.4A.Simple Expressions (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 62,
+        "role": "tutor",
+        "text": "We have to solve the inner parentheses first."
+      },
+      {
+        "turn_id": 63,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 64,
+        "role": "tutor",
+        "text": "What is 5 times 6?"
+      },
+      {
+        "turn_id": 65,
+        "role": "student",
+        "text": "50"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_64590a5105971369bbb1",
+        "e_clean": "careless",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, not quite. 5 x 10 is 50. 5 x 6 is something else. Could you give it another try?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_65b0b6d7a603ff1958de",
+    "lesson_topic": "5.5A.Polygons",
+    "c_h": [
+      {
+        "turn_id": 25,
+        "role": "tutor",
+        "text": "Before we get into the lesson, I want to know your prior knowledge on the topic."
+      },
+      {
+        "turn_id": 26,
+        "role": "student",
+        "text": "I don't have one"
+      },
+      {
+        "turn_id": 27,
+        "role": "tutor",
+        "text": "What is known about Polygons?"
+      },
+      {
+        "turn_id": 28,
+        "role": "student",
+        "text": "mmmm they have many sides"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_860c40bd06cda4c4c797",
+        "e_clean": "imprecise",
+        "z_what_clean": "AFFIRM",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "great job!",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_0d1573476aca0ef1c991",
+    "lesson_topic": "6.4E.Understanding Percents (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 17,
+        "role": "tutor",
+        "text": "The question asked to find 27 is 4% of what number? Or the total number of responses."
+      },
+      {
+        "turn_id": 18,
+        "role": "tutor",
+        "text": "First, set up the proportion."
+      },
+      {
+        "turn_id": 19,
+        "role": "tutor",
+        "text": "What number will go in the \"part?\""
+      },
+      {
+        "turn_id": 20,
+        "role": "student",
+        "text": "4"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_9b2ffe60d19121c040b2",
+        "e_clean": "misinterpret",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Yes 4 is the part of 100. What's the other part we're looking for?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_2468f6852fc9272c9fe9",
+        "e_clean": "guess",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great first try! 4 is the percent. The \"part\" is the portion of the whole we are looking for.",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Can you identify the part?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_e40851a254b0f43a4edc",
+    "lesson_topic": "3.4A.Subtracting Whole Numbers",
+    "c_h": [
+      {
+        "turn_id": 43,
+        "role": "tutor",
+        "text": "+1 point for the great try."
+      },
+      {
+        "turn_id": 44,
+        "role": "tutor",
+        "text": "Whatis 60-4?"
+      },
+      {
+        "turn_id": 45,
+        "role": "tutor",
+        "text": "Sorry for the typo* what is 60-4?"
+      },
+      {
+        "turn_id": 46,
+        "role": "student",
+        "text": "54"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_2fb686fd435686e2b313",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, you're close! 60 - 6 is 54",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_503d822b602d660fa6b6",
+    "lesson_topic": "3.2B.Multiples of Ten",
+    "c_h": [
+      {
+        "turn_id": 45,
+        "role": "tutor",
+        "text": "Let me know if you need any help with it."
+      },
+      {
+        "turn_id": 46,
+        "role": "student",
+        "text": "it is 20"
+      },
+      {
+        "turn_id": 47,
+        "role": "tutor",
+        "text": "What is 3 multiplied by 4?"
+      },
+      {
+        "turn_id": 48,
+        "role": "student",
+        "text": "20"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_e9a62d49c6cd55e5608d",
+        "e_clean": "guess",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. 3 x 4 is just 3 + 3 + 3 + 3. Could you add those together and let me know what you get?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_6cb7fccbf66bef630991",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "That is incorrect. Please use your calculator to double check your answer.  ",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_0b890d6097308d49d03b",
+    "lesson_topic": "4.6D.Classifying 2D Figures",
+    "c_h": [
+      {
+        "turn_id": 27,
+        "role": "tutor",
+        "text": "Quadrilateral- a polygon with 4 sides and 4 angles."
+      },
+      {
+        "turn_id": 28,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 29,
+        "role": "tutor",
+        "text": "What is a right angle?"
+      },
+      {
+        "turn_id": 30,
+        "role": "student",
+        "text": "it has all of the sides equal"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_1f4cae0e4df759bd5cb2",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Oh no, that's something else. A right angle is an angle that is 90 degrees, like the corner of a square",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_d1e0b93610d88b1a27bc",
+    "lesson_topic": "2.4B.Addition and Subtraction Within 100",
+    "c_h": [
+      {
+        "turn_id": 68,
+        "role": "tutor",
+        "text": "We need to subtract 6 from 15."
+      },
+      {
+        "turn_id": 69,
+        "role": "student",
+        "text": "oh okay..."
+      },
+      {
+        "turn_id": 70,
+        "role": "tutor",
+        "text": "What is the value of 15 - 6?"
+      },
+      {
+        "turn_id": 71,
+        "role": "student",
+        "text": "it is 11?"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_0a026456ff0c140a42ce",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "You're close! Let's do 24 - 7 on the whiteboard and then you can think about your answer again.",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_0638386499fbca6ead8a",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, almost! Here's how we can know for sure",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "We start at 15 and we need to go down 6. So let's count down 6 numbers from 15",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "14, 13, 12, 11, 10, 9",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_3e4b8ccf207e158c0f13",
+    "lesson_topic": "4.2A.Place Value",
+    "c_h": [
+      {
+        "turn_id": 80,
+        "role": "tutor",
+        "text": "Now, write the place values on the whiteboard."
+      },
+      {
+        "turn_id": 81,
+        "role": "tutor",
+        "text": "Good job! Plus 1 point."
+      },
+      {
+        "turn_id": 82,
+        "role": "tutor",
+        "text": "How many thousands are there in 2000?"
+      },
+      {
+        "turn_id": 83,
+        "role": "student",
+        "text": "1"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_ee5e6cef2027564ca993",
+        "e_clean": "misinterpret",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hm, not quite. What I mean to say is, how many times can 1000 go into 2000?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_be20eb64f2e59c8c42be",
+    "lesson_topic": "3.7C.Using Time",
+    "c_h": [
+      {
+        "turn_id": 63,
+        "role": "tutor",
+        "text": "His train ride takes 45 minutes."
+      },
+      {
+        "turn_id": 64,
+        "role": "tutor",
+        "text": "We need to find the latest time Luciano can leave to make it to work by 9:00 am."
+      },
+      {
+        "turn_id": 65,
+        "role": "tutor",
+        "text": "How long is Luciano's train ride?"
+      },
+      {
+        "turn_id": 66,
+        "role": "student",
+        "text": "8: 15"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_36b44b1c65b700871ee5",
+        "e_clean": "imprecise",
+        "z_what_clean": "AFFIRM",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great job! Luciano needs to leave at 8:15 in order to make it to work by 9:00",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_e3fbb29cf0d10cbb82d1",
+        "e_clean": "imprecise",
+        "z_what_clean": "AFFIRM",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Yes, since Luciano's train ride is 45 minutes, he would need to leave at the latest at 8:15. Good thinking!",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_5f8d6e66459d1d806f0e",
+    "lesson_topic": "6.4F.Applying Ratios: Speed",
+    "c_h": [
+      {
+        "turn_id": 29,
+        "role": "tutor",
+        "text": "We can compare the ratios more easily if we express them as percentages."
+      },
+      {
+        "turn_id": 30,
+        "role": "tutor",
+        "text": "First we need to write in decimal."
+      },
+      {
+        "turn_id": 31,
+        "role": "tutor",
+        "text": "What is the decimal value of 2/3?"
+      },
+      {
+        "turn_id": 32,
+        "role": "student",
+        "text": "2.3"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_140f94a13450e71f8696",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "I see your logic, but decimals are actually what we get when we divide the fraction. So we would divide 2/3",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_07e2f88ae6c7f142c571",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ah, not quite. To convert a fraction into a decimal, we just divide the top by the bottom",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Could you go to desmos.com/scientific and type 2/3? Let me know what you get",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_de38c43a38928d17724a",
+    "lesson_topic": "4.4A.Adding Multi-Digit Numbers",
+    "c_h": [
+      {
+        "turn_id": 24,
+        "role": "tutor",
+        "text": "We will start in the one's place and add 6 and 9."
+      },
+      {
+        "turn_id": 25,
+        "role": "student",
+        "text": "kk"
+      },
+      {
+        "turn_id": 26,
+        "role": "tutor",
+        "text": "What is the value of 6+9?"
+      },
+      {
+        "turn_id": 27,
+        "role": "student",
+        "text": "13"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_09c7b1041d67d3168ce7",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Good try! Try using a number line. Start at 6 and move 9 spaces. Where are you now?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_4c9f65fdbce85ea81d21",
+        "e_clean": "right-idea",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Can you double check your work? Count up 6 from 9",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_2356f1048f3690c6682c",
+    "lesson_topic": "5.3A.Multi-Digit Division with Two-Digit Divisors (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 17,
+        "role": "tutor",
+        "text": "Multiply: 5 × 11 is 55."
+      },
+      {
+        "turn_id": 18,
+        "role": "tutor",
+        "text": "Next, we subtract 63-55."
+      },
+      {
+        "turn_id": 19,
+        "role": "tutor",
+        "text": "What is the value of 63-55?"
+      },
+      {
+        "turn_id": 20,
+        "role": "student",
+        "text": "12"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_610589cbe0a50fa6d5b3",
+        "e_clean": "careless",
+        "z_what_clean": "HINT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! It looks like you solved 65-53 instead of 63-55",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_c7071b327a89ce41d9cc",
+    "lesson_topic": "3.7C.Using Time",
+    "c_h": [
+      {
+        "turn_id": 62,
+        "role": "student",
+        "text": "?"
+      },
+      {
+        "turn_id": 63,
+        "role": "tutor",
+        "text": "We have to subtract these values."
+      },
+      {
+        "turn_id": 64,
+        "role": "tutor",
+        "text": "What is the value of 60-45?"
+      },
+      {
+        "turn_id": 65,
+        "role": "student",
+        "text": "12 : 60"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_c15cad124fa287535f20",
+        "e_clean": "misinterpret",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try! Let's take this one step at a time. Can you answer 60-45?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_ba7fdc64f34bb0b5e6f4",
+    "lesson_topic": "3.5B.Word Problems with Multiplication",
+    "c_h": [
+      {
+        "turn_id": 6,
+        "role": "tutor",
+        "text": "can you see the question ?"
+      },
+      {
+        "turn_id": 7,
+        "role": "student",
+        "text": "yes"
+      },
+      {
+        "turn_id": 8,
+        "role": "tutor",
+        "text": "Why is it important to check if there is any unnecessary information in a word problem?"
+      },
+      {
+        "turn_id": 9,
+        "role": "student",
+        "text": "i dont no"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_a1106097ccf4c38138e9",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Ok! Let's talk through why it is important. Can you identify any information that isn't needed to solve the problem?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_994dd98d95b722b0af17",
+        "e_clean": "guess",
+        "z_what_clean": "SIMPLIFY",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "It's so that we know use the wrong information when calculating the answer. For example, Abby has 3 apples and 4 bananas. Bob has 2 apples and 6 bananas. How many apples do Abby and Bob have in total?",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "This question is only asking for how many apples Abby and Bob have in total. So the information about how many bananas they have is unnecessary and we should be careful not to accidentally use that when calculating our answer",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_432ef011cb0c6ba62a16",
+    "lesson_topic": "6.2E.Dividing Fractions Word Problems (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 38,
+        "role": "student",
+        "text": "ok i got the answer"
+      },
+      {
+        "turn_id": 39,
+        "role": "tutor",
+        "text": "You have to divide this fraction using the long division method."
+      },
+      {
+        "turn_id": 40,
+        "role": "tutor",
+        "text": "What is the value for 72 times 5?"
+      },
+      {
+        "turn_id": 41,
+        "role": "student",
+        "text": "310"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_0003c09b9fcefec0cfad",
+        "e_clean": "careless",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Oh you're very close. 62 times 5 = 310, but 72 times 5 is a little bigger",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "Could you give it another try please?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_9f57271d822ea5312ae6",
+    "lesson_topic": "6.8B.Areas by Decomposition (Review) - 1",
+    "c_h": [
+      {
+        "turn_id": 9,
+        "role": "tutor",
+        "text": "Now let us focus on our session."
+      },
+      {
+        "turn_id": 10,
+        "role": "student",
+        "text": "ok"
+      },
+      {
+        "turn_id": 11,
+        "role": "tutor",
+        "text": "What is the formula for the area of a rectangle?"
+      },
+      {
+        "turn_id": 12,
+        "role": "student",
+        "text": "30"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_41d66359306b944e7cc2",
+        "e_clean": "right-idea",
+        "z_what_clean": "CORRECT",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hm, not quite. Could you let me know how you got 30?",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_4c4cc6582b072be32282",
+        "e_clean": "diagnose",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "How did you get 30 for the area?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_db648aec47d94e58002b",
+    "lesson_topic": "6.2D.Ordering Rational Numbers (Review) - 2",
+    "c_h": [
+      {
+        "turn_id": 15,
+        "role": "student",
+        "text": "3.4"
+      },
+      {
+        "turn_id": 16,
+        "role": "tutor",
+        "text": "Give me a minute."
+      },
+      {
+        "turn_id": 17,
+        "role": "tutor",
+        "text": "What is the value of 3 divided by 4?"
+      },
+      {
+        "turn_id": 18,
+        "role": "student",
+        "text": "10"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_bf8740bb1ecf970d3d95",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Good try! When you divide whole numbers, the number should get smaller because you are dividing it into groups. For example, 10 divided by 5 is 2 because you can make two groups of 5.",
+            "user": "tutor"
+          }
+        ]
+      },
+      {
+        "annotation_id": "A_3aca67462b32b05cb038",
+        "e_clean": "guess",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Hmm, not quite. Could you tell me how you got 10?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_7c14ecc4526f324a9244",
+    "lesson_topic": "4.7A.Measuring Angles",
+    "c_h": [
+      {
+        "turn_id": 63,
+        "role": "tutor",
+        "text": "Next we solve the equation to find that the measure of the angles is 18 degrres."
+      },
+      {
+        "turn_id": 64,
+        "role": "student",
+        "text": "18"
+      },
+      {
+        "turn_id": 65,
+        "role": "tutor",
+        "text": "What is the difference between 58 and 40?"
+      },
+      {
+        "turn_id": 66,
+        "role": "student",
+        "text": "30"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_5ef9c0a35d00f61a8925",
+        "e_clean": "careless",
+        "z_what_clean": "PROBE",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Great try. Can you try that subtraction again?",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "history_id": "H_1b7aa82d19d547818d4e",
+    "lesson_topic": "4.1A.Converting Units of Measure",
+    "c_h": [
+      {
+        "turn_id": 28,
+        "role": "tutor",
+        "text": "Let me explain it to you again."
+      },
+      {
+        "turn_id": 29,
+        "role": "tutor",
+        "text": "Unit rate is used to compare quantities in which the second quantity is one."
+      },
+      {
+        "turn_id": 30,
+        "role": "tutor",
+        "text": "How many inches are in 1 foot?"
+      },
+      {
+        "turn_id": 31,
+        "role": "student",
+        "text": "14"
+      }
+    ],
+    "annotations": [
+      {
+        "annotation_id": "A_e7e2aec4c67caf856fe0",
+        "e_clean": "right-idea",
+        "z_what_clean": "EXPLAIN",
+        "c_r_": [
+          {
+            "is_revised": true,
+            "text": "Close! There are 12 inches in a foo",
+            "user": "tutor"
+          },
+          {
+            "is_revised": true,
+            "text": "foot*",
+            "user": "tutor"
+          }
+        ]
+      }
+    ]
+  }
+]
