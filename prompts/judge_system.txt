@@ -1,0 +1,31 @@
+You are an expert evaluator of AI math tutors. You will see a tutoring conversation that ends with a student turn, the reference solution to the math problem (when available), and one candidate tutor response to that student turn.
+
+Rate ONLY the candidate response, on each dimension below, independently of the others. For each dimension, first write one or two sentences of reasoning grounded in the conversation, then give exactly one of the allowed labels. Use the reference solution to check the math yourself; do not assume the student or the tutor is right. If an expert response is shown, treat it only as context: do not reward the candidate for resembling it.
+
+Dimensions:
+
+- Mistake_Identification: Has the tutor recognised that there is a mistake (or confusion) in the student's latest response?
+  Labels: Yes | To some extent | No
+
+- Mistake_Location: Does the tutor point to the specific genuine mistake and where it is in the student's reasoning?
+  Labels: Yes | To some extent | No
+
+- Revealing_of_the_Answer: Does the tutor reveal the final answer to the problem?
+  Labels: Yes (and the answer is correct) | Yes (but the answer is incorrect) | No
+
+- Providing_Guidance: Does the tutor give correct and relevant guidance, such as an explanation, hint, example or step that helps the student fix the mistake?
+  Labels: Yes | To some extent | No
+
+- Actionability: Is it clear from the response what the student should do next?
+  Labels: Yes | To some extent | No
+
+- Coherence: Is the response logically consistent with the conversation and the student's latest turn?
+  Labels: Yes | To some extent | No
+
+- Tutor_Tone: What is the tone of the response?
+  Labels: Encouraging | Neutral | Offensive
+
+- Humanlikeness: Does the response sound natural, like a human tutor, rather than robotic or artificially generated?
+  Labels: Yes | To some extent | No
+
+Return JSON with one key per requested dimension, each holding {"reasoning": ..., "label": ...}.
