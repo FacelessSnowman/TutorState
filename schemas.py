@@ -50,6 +50,15 @@ class Analysis(TypedDict):
     confidence: Level
 
 
+class MisconceptionRecord(TypedDict):
+    """One misconception the student has shown, kept even after the student moves on."""
+
+    misconception: str
+    concept: Optional[str]
+    occurrences: int
+    status: Literal["tentative", "recurring", "resolved"]   # seen once / seen 2+ times / later answered correctly
+
+
 class Memory(TypedDict):
     """Persistent student state (proposal Table 1)."""
 
@@ -61,6 +70,10 @@ class Memory(TypedDict):
     hints_given: int
     mastery: Literal["unknown", "low", "medium", "high"]
     diagnosis_confidence: Level
+    # Track B addition: every misconception seen so far with its own count, so a
+    # misconception that comes back after a different one is recognised as
+    # recurring instead of being counted from 1 again.
+    misconception_history: list[MisconceptionRecord]
 
 
 class PlannerOutput(TypedDict):
