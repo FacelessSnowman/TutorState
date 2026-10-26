@@ -1,7 +1,7 @@
 guess: The answer has no sensible link to the question, as if the student just said a number or word without working it out. Example: asked "What is 5 times 2?", answers "5".
-careless: The student clearly knows the method but slipped on a small step or fact, so the answer is close to correct. Example: asked "What is 9 times 8?", answers "81".
-right-idea: The student is on the right track but the answer is incomplete or not fully worked out. Example: asked how to round 17 to the nearest ten, answers "you turn the 1 into a 2".
+careless: A one-off slip on a basic fact or a single digit that the student clearly knows, so the answer is almost exactly right. Example: asked "What is 9 times 8?", answers "81".
+right-idea: The student is using a sensible method or is heading in the right direction, but the answer is wrong, incomplete or not fully worked out, by more than a single slip. Example: asked how to round 17 to the nearest ten, answers "you turn the 1 into a 2"; asked "2800 - 65", answers "1745" (subtracted but went wrong in the working).
 misinterpret: The student answered a different question from the one asked, for example giving a number when a formula or definition was asked for. Example: asked "What is the formula for the volume of a rectangular prism?", answers "59".
 imprecise: The answer is essentially right but vague, incomplete in wording, or in the wrong form. Example: asked "What is a rectangle?", answers "a shape with 4 sides".
-diagnose: It is not possible to tell what the student was thinking: the message is empty, not an attempt, or too unclear to judge. The tutor would first need to find out more.
+diagnose: There is no answer to judge: the student has not given an answer, the message is empty or unreadable, or the student is only saying they are stuck, leaving or done. The tutor would first need to find out more. Not for answers that can be judged even though the full problem is not shown.
 no_error: The answer is correct.
