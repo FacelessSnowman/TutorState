@@ -19,6 +19,7 @@ Fairness rules:
     acceptable = load_acceptable("results/acceptable_validation.jsonl")
     score_strategy(results, gold, acceptable)
 
+    python -m eval.acceptable build --bridge <split file> --dry-run       # costs API credit without --dry-run
     python -m eval.acceptable summary results/acceptable_validation.jsonl --bridge <split file>
     python -m eval.acceptable export results/acceptable_validation.jsonl --bridge <split file> --n 30 --out results/acceptable_review.csv
     python -m eval.acceptable review results/acceptable_review.csv results/acceptable_validation.jsonl
@@ -40,7 +41,7 @@ from sklearn.metrics import cohen_kappa_score
 
 from agents.prompting import build_user_prompt, format_action_definitions, load_prompt
 from eval.cache import run_cached
-from llm import LLM
+from llm import LLM, LLMError
 from schemas import ACTIONS, Turn
 
 ACCEPTABLE_SCHEMA = {
@@ -125,7 +126,9 @@ def build_acceptable(llm: LLM, cases: Sequence[dict], out_path) -> int:
         for c in cases
     )
     return run_cached(
-        items, out_path, ("case_id",), prompt_version(), lambda payload: judge_acceptable(llm, **payload)
+        items, out_path, ("case_id",), prompt_version(), lambda payload: judge_acceptable(llm, **payload),
+        skip_errors=(AcceptableError, LLMError),
+        usage=getattr(llm, "usage", None),
     )
 
 
@@ -229,11 +232,58 @@ def review_agreement(sheet_path, acceptable: dict[str, list[str]]) -> dict:
     }
 
 
+def run_build(args) -> None:
+    """The `build` command: one LLM call per Bridge history not already in the output file."""
+    from eval.run_judge import build_llm, load_env_file
+    from experiments.run_experiment import DEFAULT_MODELS
+
+    load_env_file()
+    model = args.model or DEFAULT_MODELS[args.provider]
+    cases = load_bridge_cases(args.bridge)
+    if args.limit is not None:
+        cases = cases[:args.limit]
+    out = Path(args.out or Path("results") / f"acceptable_{Path(args.bridge).stem}_{model.replace('/', '-')}.jsonl")
+    version = prompt_version()
+    already = _done_cases(out)
+    done = sum(1 for c in cases if (c["case_id"], version) in already)
+    print(f"{len(cases)} histories, model {args.provider}/{model}, prompt version {version}")
+    print(f"output: {out}  ({done} already built with this prompt version, {len(cases) - done} API calls to make)")
+    if args.dry_run:
+        print("\n--- system prompt ---\n" + system_prompt())
+        print("\n--- first user prompt ---\n" + build_user_prompt(cases[0]["history"], lesson_topic=cases[0].get("lesson_topic")))
+        print("\ndry run: no API calls made")
+        return
+    llm = build_llm(args.provider, model, args.effort, args.max_tokens)
+    new = build_acceptable(llm, cases, out)
+    print(f"built {new} new acceptable-action sets")
+    usage = getattr(llm, "usage", None)
+    if usage:
+        print(f"LLM usage: {usage['calls']} calls, ${usage['cost_usd']:.4f}")
+    print(f"next: python -m eval.acceptable summary {out} --bridge {args.bridge}")
+
+
+def _done_cases(out: Path) -> set[tuple]:
+    if not out.exists():
+        return set()
+    with open(out, encoding="utf-8") as f:
+        return {(r["case_id"], r["prompt_version"]) for r in map(json.loads, filter(str.strip, f))}
+
+
 def main() -> None:
     from eval.load import load_bridge_gold
+    from eval.run_judge import PROVIDERS
 
     parser = argparse.ArgumentParser(description="Acceptable-action sets for lenient strategy scoring")
     sub = parser.add_subparsers(dest="command", required=True)
+    build = sub.add_parser("build", help="build the sets with an LLM (costs API credit; try --dry-run first)")
+    build.add_argument("--bridge", required=True, help="Bridge split file to build sets for")
+    build.add_argument("--limit", type=int, default=None, help="only the first N histories")
+    build.add_argument("--provider", choices=PROVIDERS, default="openrouter")
+    build.add_argument("--model", default=None, help="model name; omit to use the group default")
+    build.add_argument("--effort", choices=["low", "medium", "high"], default="low")
+    build.add_argument("--max-tokens", type=int, default=4000)
+    build.add_argument("--out", default=None)
+    build.add_argument("--dry-run", action="store_true", help="show what would run without calling the API")
     summary = sub.add_parser("summary")
     summary.add_argument("acceptable_file")
     summary.add_argument("--bridge", required=True, help="Bridge split file the sets were built from")
@@ -248,6 +298,9 @@ def main() -> None:
     review.add_argument("acceptable_file")
     args = parser.parse_args()
 
+    if args.command == "build":
+        run_build(args)
+        return
     acceptable = load_acceptable(args.acceptable_file)
     if args.command == "summary":
         s = summarize(acceptable, load_bridge_gold(args.bridge))

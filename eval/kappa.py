@@ -34,6 +34,16 @@ SCALES = {
 }
 DIMENSIONS = list(SCALES)
 BINARY = {"Revealing_of_the_Answer"}
+# Dimensions on which the calibrated judge agreed with MRBench human ratings on
+# held-out validation (kappa 0.60-0.80, prompt d75ce560). Coherence and
+# Humanlikeness are still judged but not reported.
+REPORTED_DIMENSIONS = [
+    "Mistake_Identification", "Mistake_Location", "Revealing_of_the_Answer",
+    "Providing_Guidance", "Actionability", "Tutor_Tone",
+]
+# MRBench's mistake dimensions assume the student made an error; on Bridge they
+# are reported on mistake cases only (see report.mistake_cases).
+MISTAKE_DIMENSIONS = ["Mistake_Identification", "Mistake_Location"]
 
 
 def to_score(dimension: str, label: str) -> int:

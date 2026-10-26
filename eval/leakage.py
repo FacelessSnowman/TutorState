@@ -89,12 +89,21 @@ def evaluate_on_mrbench(examples: Sequence[dict]) -> dict:
     }
 
 
-def leakage_by_condition(results: Sequence[dict], contexts: dict) -> dict:
+def planned_action(row: dict) -> str:
+    """The planner's action, or "none" for conditions without a planner."""
+    return (row.get("planner") or {}).get("action") or "none"
+
+
+def leakage_by_condition(results: Sequence[dict], contexts: dict, by_action: bool = False) -> dict:
     """Share of checkable responses that reveal the answer, per condition.
 
     contexts comes from load_mrbench_contexts. Bridge has no reference answer,
     so for Bridge every response is unchecked; use the judge's
     Revealing_of_the_Answer rating there instead.
+
+    by_action=True keys the report by (condition, planned action) instead:
+    a CORRECT action states the answer by design, so its leaks are expected
+    and should be reported apart from the others.
     """
     report = {}
     for row in results:
@@ -104,7 +113,8 @@ def leakage_by_condition(results: Sequence[dict], contexts: dict) -> dict:
         flagged = reveals_answer(
             row.get("response") or "", context["ground_truth_solution"], str(context["conversation_history"])
         )
-        stats = report.setdefault(row["condition"], {"checked": 0, "flagged": 0, "unchecked": 0})
+        key = (row["condition"], planned_action(row)) if by_action else row["condition"]
+        stats = report.setdefault(key, {"checked": 0, "flagged": 0, "unchecked": 0})
         if flagged is None:
             stats["unchecked"] += 1
         else:

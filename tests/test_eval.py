@@ -26,7 +26,7 @@ from eval.load import (
     load_bridge_contexts, load_bridge_gold, load_mrbench_contexts, load_mrbench_examples, load_results,
 )
 from eval.metrics import score
-from eval.report import build_report
+from eval.report import build_report, compare_judge, judge_by_action, judge_summary, mistake_cases
 from eval.strategy import score_strategy
 from llm import ScriptedLLM
 from schemas import ACTIONS
@@ -370,3 +370,85 @@ def test_partly_scored_sheet_row_raises(tmp_path):
     path.write_text("item_id,Coherence,Actionability\nitem001,Yes,\n", encoding="utf-8-sig")
     with pytest.raises(ValueError, match="partly"):
         read_sheet(path)
+
+
+# ---- report additions: mistake cases, judge comparisons, leakage by action ----
+
+def judge_rows_for(rows, label_for):
+    """Judge lines for results rows; label_for(row, dim) picks each label."""
+    return [
+        {**{k: r[k] for k in ("case_id", "condition", "seed")},
+         "judge": {d: {"reasoning": "", "label": label_for(r, d)} for d in DIMENSIONS if d != "Tutor_Tone"}}
+        for r in rows
+    ]
+
+
+def test_mistake_cases_drop_affirm_and_no_error():
+    gold = {
+        "a": {"e": ["guess"], "actions": ["HINT"]},
+        "b": {"e": ["imprecise"], "actions": ["AFFIRM"]},
+        "c": {"e": ["no_error"], "actions": ["PROBE"]},
+        "d": {"e": ["careless", "no_error"], "actions": ["CORRECT", "PROBE"]},
+    }
+    assert mistake_cases(gold) == {"a"}
+
+
+def test_judge_summary_can_be_limited_to_mistake_cases():
+    rows = fake_results("full")
+    keep = set(CASES[:5])
+    judge_rows = judge_rows_for(rows, lambda r, d: "Yes" if r["case_id"] in keep else "No")
+    assert judge_summary(judge_rows, ["Mistake_Identification"])["full"]["Mistake_Identification"]["n"] == 21
+    limited = judge_summary(judge_rows, ["Mistake_Identification"], cases=keep)
+    assert limited["full"]["Mistake_Identification"] == {"n": 5, "mean": 2.0, "ci": (2.0, 2.0)}
+
+
+def test_compare_judge_is_paired_and_seed_averaged():
+    better = fake_results("full", seed=0) + fake_results("full", seed=1)
+    worse = fake_results("memory", seed=0)
+    judge_rows = judge_rows_for(better, lambda r, d: "Yes") + judge_rows_for(worse, lambda r, d: "No")
+    diff = compare_judge(judge_rows, "Providing_Guidance", "full", "memory")
+    assert diff["n"] == 21
+    assert diff["diff"] == 2.0
+    assert diff["ci"][0] > 0
+
+
+def test_judge_and_leakage_by_planned_action():
+    rows = [
+        {"case_id": "c1", "condition": "full", "seed": 0, "planner": {"action": "CORRECT"}, "response": "It is 4."},
+        {"case_id": "c2", "condition": "full", "seed": 0, "planner": {"action": "HINT"}, "response": "Count again?"},
+        {"case_id": "c1", "condition": "baseline", "seed": 0, "planner": None, "response": "It is 4."},
+    ]
+    revealed = {"c1": "Yes (and the answer is correct)", "c2": "No"}
+    judge_rows = judge_rows_for(rows, lambda r, d: revealed[r["case_id"]] if d == "Revealing_of_the_Answer" else "Yes")
+    by_action = judge_by_action(judge_rows, rows)
+    assert by_action["full"]["CORRECT"] == {"n": 1, "mean": 1.0}
+    assert by_action["full"]["HINT"] == {"n": 1, "mean": 0.0}
+    assert by_action["baseline"]["none"] == {"n": 1, "mean": 1.0}
+
+    contexts = {c: {"ground_truth_solution": "...\n 4", "conversation_history": "Student: 5"} for c in ("c1", "c2")}
+    leaks = leakage_by_condition(rows, contexts, by_action=True)
+    assert leaks[("full", "CORRECT")]["flagged"] == 1
+    assert leaks[("full", "HINT")]["flagged"] == 0
+    assert leaks[("baseline", "none")]["flagged"] == 1
+
+
+def test_full_report_includes_new_judge_tables(tmp_path):
+    rows = fake_results("memory", n_wrong=21) + fake_results("full")
+    judge_rows = judge_rows_for(
+        rows, lambda r, d: "No" if d == "Revealing_of_the_Answer" or r["condition"] != "full" else "Yes"
+    )
+    report = build_report(rows, ["memory", "full"], gold=GOLD, judge_rows=judge_rows, out_dir=tmp_path)
+    n_mistakes = len(mistake_cases(GOLD))
+    assert report["judge_mistake_cases"]["full"]["Mistake_Identification"]["n"] == n_mistakes
+    assert report["judge_comparisons"]["full - memory"]["Mistake_Identification"]["n"] == n_mistakes
+    assert "Coherence" not in report["judge_comparisons"]["full - memory"]  # not a reported dimension
+    assert set(report["judge_revealing_by_action"]["full"]) <= set(ACTIONS)
+    json.loads((tmp_path / "report.json").read_text(encoding="utf-8"))
+
+
+def test_build_acceptable_skips_a_case_it_cannot_parse(tmp_path):
+    cases = bridge_cases(ROOT / "data/Bridge/bridge_data_size_142/142_validation.json")[:2]
+    out = tmp_path / "acc.jsonl"
+    llm = ScriptedLLM(["bad", "still bad", acceptable_reply()])  # case 1 fails twice, case 2 succeeds
+    assert build_acceptable(llm, cases, out) == 1
+    assert list(load_acceptable(out)) == [cases[1]["case_id"]]
