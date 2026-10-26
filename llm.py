@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 from typing import Optional, Protocol
+import os
 
 
 class LLMError(RuntimeError):
@@ -52,6 +53,85 @@ class ClaudeLLM:
         if response.stop_reason == "max_tokens":
             raise LLMError("hit max_tokens before finishing")
         return "".join(b.text for b in response.content if b.type == "text")
+
+class GPTLLM:
+    """GPT via the OpenAI Responses API.
+
+    Requires:
+        pip install openai
+        OPENAI_API_KEY
+
+    `model` is configurable so experiments can swap GPT models without
+    changing agent code.
+    """
+
+    def __init__(
+        self,
+        model: str = "gpt-6-luna",
+        reasoning_effort: str = "medium",
+        max_tokens: int = 16000,
+    ):
+        from openai import OpenAI
+
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.model = model
+        self.reasoning_effort = reasoning_effort
+        self.max_tokens = max_tokens
+
+    def complete(
+        self,
+        system: str,
+        user: str,
+        json_schema: Optional[dict] = None,
+    ) -> str:
+
+        kwargs = {
+            "model": self.model,
+            "instructions": system,
+            "input": user,
+            "max_output_tokens": self.max_tokens,
+            "reasoning": {
+                "effort": self.reasoning_effort,
+            },
+        }
+
+        if json_schema is not None:
+            kwargs["text"] = {
+                "format": {
+                    "type": "json_schema",
+                    "name": "agent_output",
+                    "schema": json_schema,
+                    "strict": True,
+                }
+            }
+
+        response = self.client.responses.create(
+            **kwargs
+        )
+
+        if response.status != "completed":
+            raise LLMError(
+                f"GPT response did not complete: "
+                f"status={response.status}, "
+                f"details={response.incomplete_details}"
+            )
+
+        for item in response.output:
+            if getattr(item, "type", None) != "message":
+                continue
+
+            for content in item.content:
+                if getattr(content, "type", None) == "refusal":
+                    raise LLMError(
+                        f"GPT refused: {content.refusal}"
+                    )
+
+        if not response.output_text:
+            raise LLMError(
+                "GPT returned no text output"
+            )
+
+        return response.output_text
 
 
 class ScriptedLLM:
