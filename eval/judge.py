@@ -16,10 +16,10 @@ from __future__ import annotations
 
 import hashlib
 import json
-from pathlib import Path
 from typing import Optional, Sequence, Union
 
 from agents.prompting import load_prompt
+from eval.cache import run_cached
 from eval.kappa import DIMENSIONS, SCALES
 from llm import LLM
 
@@ -132,25 +132,10 @@ RESULTS_KEY = ("case_id", "condition", "seed")
 def _judge_to_file(llm: LLM, items, out_path, key_fields: Sequence[str], dimensions: Sequence[str]) -> int:
     """items: (ids, inputs, extra) triples. ids identify the response, inputs go to
     judge(), extra is copied into the output line but never into the prompt."""
-    out_path = Path(out_path)
-    version = prompt_version(dimensions)
-    done = set()
-    if out_path.exists():
-        with open(out_path, encoding="utf-8") as f:
-            for row in map(json.loads, filter(str.strip, f)):
-                done.add(tuple(row[k] for k in key_fields) + (row["prompt_version"],))
-
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    new = 0
-    with open(out_path, "a", encoding="utf-8") as f:
-        for ids, inputs, extra in items:
-            if tuple(ids[k] for k in key_fields) + (version,) in done:
-                continue
-            row = {**ids, "prompt_version": version, "judge": judge(llm, **inputs, dimensions=dimensions), **extra}
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
-            f.flush()  # each line is paid for; keep it even if a later call crashes
-            new += 1
-    return new
+    return run_cached(
+        items, out_path, key_fields, prompt_version(dimensions),
+        lambda inputs: {"judge": judge(llm, **inputs, dimensions=dimensions)},
+    )
 
 
 def run_judge(llm: LLM, examples: Sequence[dict], out_path, dimensions: Sequence[str] = DIMENSIONS) -> int:

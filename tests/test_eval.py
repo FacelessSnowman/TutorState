@@ -12,6 +12,11 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from eval.acceptable import (
+    AcceptableError, build_acceptable, export_review_sheet, judge_acceptable, load_acceptable,
+    read_review_sheet, review_agreement, summarize,
+)
+from eval.acceptable import load_bridge_cases as bridge_cases
 from eval.diagnosis import ERROR_TYPES, compare_diagnosis, score_diagnosis
 from eval.human_sheet import compare_sheets, export_sheet, read_sheet, results_items, sheet_vs_judge
 from eval.judge import JudgeError, judge, run_judge, run_judge_results
@@ -261,6 +266,103 @@ def test_human_sheet_round_trip(tmp_path):
     judge_rows = [{**{k: r[k] for k in ("case_id", "condition", "seed")}, "judge": ratings()} for r in rows]
     vs = sheet_vs_judge(tmp_path / "a.csv", key, judge_rows)
     assert vs["Coherence"]["n"] == 5
+
+
+def test_report_reads_acceptable_jsonl_file(tmp_path):
+    path = tmp_path / "acc.jsonl"
+    path.write_text("".join(
+        json.dumps({"case_id": c, "prompt_version": "v1", "acceptable": list(ACTIONS)}) + "\n" for c in CASES
+    ), encoding="utf-8")
+    rows = fake_results(n_wrong=21)
+    report = build_report(rows, ["full"], gold=GOLD, acceptable=load_acceptable(path))
+    assert report["strategy"]["lenient"]["full"]["any_match"]["mean"] == 1.0
+
+
+# ---- acceptable-action sets ------------------------------------------------
+
+BRIDGE_VAL = ROOT / "data/Bridge/bridge_data_size_142/142_validation.json"
+
+
+def acceptable_reply(accepted=("PROBE", "HINT")):
+    return {a: {"reasoning": "because", "acceptable": a in accepted} for a in ACTIONS}
+
+
+def test_acceptable_judge_never_sees_expert_labels_or_responses():
+    case = bridge_cases(BRIDGE_VAL)[0]
+    llm = ScriptedLLM([acceptable_reply()])
+    result = judge_acceptable(llm, case["history"], case["lesson_topic"])
+    assert result["acceptable"] == ["PROBE", "HINT"]
+    prompt = llm.calls[0]["system"] + llm.calls[0]["user"]
+    for expert_text in GOLD[case["case_id"]]["expert_responses"]:
+        assert expert_text.strip() not in prompt
+    assert case["history"][-1]["text"] in prompt
+
+
+def test_acceptable_judge_retries_then_raises():
+    broken = acceptable_reply()
+    del broken["AFFIRM"]
+    with pytest.raises(AcceptableError):
+        judge_acceptable(ScriptedLLM(["not json", broken]), bridge_cases(BRIDGE_VAL)[0]["history"])
+
+
+def test_build_acceptable_caches_and_loads(tmp_path):
+    cases = bridge_cases(BRIDGE_VAL)[:3]
+    out = tmp_path / "acc.jsonl"
+    assert build_acceptable(ScriptedLLM([acceptable_reply()] * 3), cases, out) == 3
+    assert build_acceptable(ScriptedLLM([]), cases, out) == 0
+    assert load_acceptable(out) == {c["case_id"]: ["PROBE", "HINT"] for c in cases}
+
+
+def test_load_acceptable_refuses_mixed_prompt_versions(tmp_path):
+    out = tmp_path / "acc.jsonl"
+    out.write_text(
+        json.dumps({"case_id": "a", "prompt_version": "v1", "acceptable": []}) + "\n"
+        + json.dumps({"case_id": "a", "prompt_version": "v2", "acceptable": ["HINT"]}) + "\n",
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="versions"):
+        load_acceptable(out)
+    assert load_acceptable(out, version="v2") == {"a": ["HINT"]}
+
+
+def test_summarize_expert_coverage():
+    first = CASES[0]
+    gold = {first: {"actions": ["HINT", "EXPLAIN"]}}
+    s = summarize({first: ["HINT", "PROBE"]}, gold)
+    assert s["expert_coverage"] == 0.5
+    assert s["mean_set_size"] == 2
+
+
+def test_review_sheet_round_trip(tmp_path):
+    import csv
+    cases = bridge_cases(BRIDGE_VAL)
+    acceptable = {c["case_id"]: ["PROBE", "HINT"] for c in cases}
+    sheet = tmp_path / "review.csv"
+    export_review_sheet(cases, acceptable, sheet, n=5)
+    assert "PROBE, HINT" not in sheet.read_text(encoding="utf-8-sig")  # blind: no LLM labels
+
+    with open(sheet, newline="", encoding="utf-8-sig") as f:
+        rows = list(csv.DictReader(f))
+    for row in rows:
+        row.update({a: "y" if a in ("PROBE", "HINT") else "n" for a in ACTIONS})
+    rows[0]["EXPLAIN"] = "y"  # human accepts one extra action the LLM rejected
+    with open(sheet, "w", newline="", encoding="utf-8-sig") as f:
+        writer = csv.DictWriter(f, list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+
+    r = review_agreement(sheet, acceptable)
+    assert r["n_cases"] == 5
+    assert r["precision"] == 1.0
+    assert r["recall"] == pytest.approx(10 / 11)
+
+
+def test_review_sheet_rejects_typos(tmp_path):
+    sheet = tmp_path / "review.csv"
+    sheet.write_text("case_id," + ",".join(ACTIONS) + "\nH_1," + ",".join(["y"] * 6 + ["maybe"]) + "\n",
+                     encoding="utf-8-sig")
+    with pytest.raises(ValueError, match="y or n"):
+        read_review_sheet(sheet)
 
 
 def test_partly_scored_sheet_row_raises(tmp_path):

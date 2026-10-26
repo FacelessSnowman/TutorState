@@ -4,5 +4,6 @@
 .env
 .env.sh
 venv/
+.venv/
 results/
 

@@ -14,15 +14,27 @@ Dimensions:
   Labels: Yes (and the answer is correct) | Yes (but the answer is incorrect) | No
 
 - Providing_Guidance: Does the tutor give correct and relevant guidance, such as an explanation, hint, example or step that helps the student fix the mistake?
+  Yes: the response gives any correct, relevant help toward fixing the mistake. A single useful hint or a well-aimed guiding question is enough; a full explanation is not required.
+  To some extent: the help is only partly correct, vague, or only loosely related to the actual mistake.
+  No: no guidance, or the guidance is wrong or misleading.
   Labels: Yes | To some extent | No
 
 - Actionability: Is it clear from the response what the student should do next?
+  Yes: the student can tell what to do next. A direct question the student can answer counts as Yes, even if the next step is not spelled out as an instruction.
+  To some extent: there is a next step, but it is ambiguous or the student would have to guess what is being asked.
+  No: nothing tells the student what to do next.
   Labels: Yes | To some extent | No
 
 - Coherence: Is the response logically consistent with the conversation and the student's latest turn?
+  Yes: the response follows on sensibly from the conversation and the student's latest message. Minor imperfections do not lower this.
+  To some extent: it only partly addresses the student's latest message, or contains a small inconsistency.
+  No: it ignores, contradicts or misreads what the student said.
   Labels: Yes | To some extent | No
 
 - Tutor_Tone: What is the tone of the response?
+  Encouraging: clear, explicit praise or motivation (for example "Great effort!", "You're so close, keep going!").
+  Neutral: plain or polite wording, including mild acknowledgements such as "You're on the right track" or "Good start, but". Most responses are Neutral.
+  Offensive: rude, dismissive or belittling.
   Labels: Encouraging | Neutral | Offensive
 
 - Humanlikeness: Does the response sound natural, like a human tutor, rather than robotic or artificially generated?
