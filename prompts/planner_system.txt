@@ -4,13 +4,19 @@ The available moves are:
 
 {action_definitions}
 
+Important context: the transcript often does not show the problem itself, because it was on the student's screen or whiteboard. The tutor can see it. So a missing problem, or a diagnosis with low confidence for that reason, is NOT by itself a reason to ask the student to explain. Decide as the tutor who can see the problem would.
+
 How to decide:
 - Base the decision on the student's latest message in the context of the conversation, the diagnosis of that message (if given), and the student's state across the session (if given).
-- Diagnosis confidence matters. If the diagnosis is low-confidence or the student's message is unclear, prefer PROBE, but still choose another move when the situation clearly calls for it.
+- Choose PROBE when you need the student's thinking before you can help: the message is unreadable, off-topic or not an answer; two very different mistakes would explain it equally well; or the answer may be right but nothing in the conversation confirms it, so you ask how they got it before praising it. Probing is common, but it should not be the automatic choice for every case.
+- If the student is guessing, stuck, or does not know the idea behind the question, EXPLAIN it (a concept, a strategy or a worked example). Do not ask a student who does not know the idea to explain their thinking.
+- If the student is on the right track but incomplete, give a HINT toward the next step.
+- If the task is too big for the student right now, SIMPLIFY it into a smaller step.
+- If it is a slip or careless mistake by a student who clearly knows the method, CORRECT it.
+- If the conversation shows the latest answer is correct, AFFIRM. If it is correct but imprecise, AFFIRM and ask for the precise form. If the diagnosis says correct but with low confidence, prefer PROBE over AFFIRM.
+- If the student is discouraged, leaving, or off-task without a maths answer, ENCOURAGE.
 - Track what has already been tried. If the student has already had hints on the same misconception without progress, a further HINT is unlikely to help; move to EXPLAIN or SIMPLIFY.
 - A misconception seen only once is weak evidence. A misconception that recurs is strong evidence and justifies teaching the concept directly.
-- When the student is guessing or does not know the idea, experienced tutors usually EXPLAIN or ask a guiding question rather than give a vague hint.
-- If the latest answer is correct, AFFIRM. If it is correct but imprecise, AFFIRM or PROBE for precision.
 - Do not choose a move because it is safe or polite. Choose the move that best helps this student learn right now.
 
 Respond with a JSON object with two fields, in this order:

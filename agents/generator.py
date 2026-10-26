@@ -21,6 +21,21 @@ from schemas import ACTIONS, Turn
 
 _SPEAKER_LABEL = re.compile(r"^\s*\**\s*(tutor|teacher|assistant)\s*\**\s*:\s*\**\s*", re.IGNORECASE)
 _WRAPPING_QUOTES = ('"', "'", "“", "”")
+# Signs of the model's own planning notes: a tutor talks *to* the student ("you"),
+# never about "the student" or about what it "should" do.
+_PLANNING_NOTES = re.compile(r"\b(the student|the tutor|the learner)\b|\bI should\b", re.IGNORECASE)
+# The tutor claiming it cannot see the problem/answer/work (BRIDGE transcripts omit the
+# whiteboard). Rewritten by retrying; a real tutor in the session could see it.
+_CANT_SEE = re.compile(
+    # "I can't see your work", "I don't know the problem yet"
+    r"\b(can.?t|cannot|can not|don.?t|do not|isn.?t|is not|not)\s+(yet\s+)?"
+    r"(see|seen|shown|showing|visible|have|know)\b[^.?!]{0,40}"
+    r"\b(problem|question|answer|work|whiteboard|picture|screen|number you wrote)\b"
+    # "The problem isn't shown in our chat", "the question itself isn't here"
+    r"|\b(problem|question)\b[^.?!]{0,20}\b(isn.?t|is not|not)\s+(yet\s+)?"
+    r"(shown|showing|visible|in (our|the) chat|here)\b",
+    re.IGNORECASE,
+)
 
 
 class GeneratorError(RuntimeError):
@@ -46,6 +61,17 @@ def clean_response(text: str) -> str:
     return text
 
 
+def remove_planning_notes(text: str) -> Optional[str]:
+    """Drop paragraphs where the model talks about the student or its plan instead of to the student.
+
+    Returns the remaining message, or None if nothing usable is left (the
+    whole reply was notes), so the caller can retry.
+    """
+    paragraphs = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
+    kept = [p for p in paragraphs if not _PLANNING_NOTES.search(p)]
+    return "\n\n".join(kept) or None
+
+
 def generate(
     llm: LLM,
     history: Sequence[Turn],
@@ -56,6 +82,7 @@ def generate(
     planner_reason: Optional[str] = None,
     problem: Optional[str] = None,
     reference_solution: Optional[str] = None,
+    max_attempts: int = 2,
 ) -> str:
     if action is not None and action not in ACTIONS:
         raise ValueError(f"unknown action {action!r}")
@@ -74,7 +101,18 @@ def generate(
         memory=memory,
         extra_sections=extra,
     )
-    response = clean_response(llm.complete(system_prompt(action), user))
-    if not response:
-        raise GeneratorError("model returned an empty message")
-    return response
+    rejected = []
+    fallback = None
+    for _ in range(max_attempts):
+        raw = llm.complete(system_prompt(action), user)
+        response = remove_planning_notes(clean_response(raw))
+        if response and not _CANT_SEE.search(response):
+            return response
+        if response:
+            fallback = response  # usable but says it can't see the problem; retry for a better one
+        rejected.append(raw)
+    if fallback:
+        return fallback  # a valid message is better than failing the case
+    raise GeneratorError(
+        f"no usable message after {max_attempts} attempts (empty or only planning notes): {rejected[-1][:200]!r}"
+    )
