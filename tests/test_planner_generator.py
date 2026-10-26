@@ -10,7 +10,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from agents.generator import clean_response, generate
+from agents.generator import GeneratorError, clean_response, generate
 from agents.planner import PlannerError, plan
 from llm import ScriptedLLM
 from mocks.track_c import iter_mock_cases
@@ -73,6 +73,47 @@ def test_generator_ablation_only_changes_sections():
 def test_generator_rejects_unknown_action():
     with pytest.raises(ValueError):
         generate(ScriptedLLM(["Hi"]), INPUTS["history"], action="LECTURE")
+
+
+LEAKED = (
+    "The student has answered 2/2 twice now, and the tutor asked if it's final. I should gently check "
+    "their thinking without giving away anything.\n\n"
+    "Thanks for sticking with it! Before we decide if 2/2 is your final answer, can you tell me how you got it?"
+)
+
+
+def test_generator_drops_planning_notes_and_keeps_the_message():
+    message = generate(ScriptedLLM([LEAKED]), INPUTS["history"])
+    assert message.startswith("Thanks for sticking with it!")
+    assert "the student" not in message.lower()
+
+
+def test_generator_retries_when_the_reply_is_only_notes():
+    llm = ScriptedLLM(["The student seems unsure, so I should probe.", "How did you get 4 m?"])
+    assert generate(llm, INPUTS["history"]) == "How did you get 4 m?"
+    assert len(llm.calls) == 2
+
+
+def test_generator_raises_after_repeated_notes():
+    llm = ScriptedLLM(["The student is unsure.", "I should ask the student a question."])
+    with pytest.raises(GeneratorError):
+        generate(llm, INPUTS["history"])
+
+
+def test_generator_retries_a_reply_that_says_it_cannot_see_the_work():
+    llm = ScriptedLLM(["I can't see your work on this one, so what did you get?", "How did you get 4 m?"])
+    assert generate(llm, INPUTS["history"]) == "How did you get 4 m?"
+
+
+def test_generator_keeps_a_cant_see_reply_rather_than_failing_the_case():
+    reply = "The problem isn't shown here, so how did you get 4 m?"
+    assert generate(ScriptedLLM([reply, reply]), INPUTS["history"]) == reply
+
+
+def test_generator_prompt_forbids_saying_it_cannot_see_the_problem():
+    llm = ScriptedLLM(["Hi"])
+    generate(llm, INPUTS["history"])
+    assert "Never say that you cannot see" in llm.calls[0]["system"]
 
 
 @pytest.mark.parametrize("raw, cleaned", [
