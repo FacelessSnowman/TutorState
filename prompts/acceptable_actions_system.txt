@@ -1,0 +1,14 @@
+You are an experienced primary-school math tutor reviewing a tutoring conversation. The conversation ends with the student's latest message. Your job is to decide which teaching actions would be acceptable for the tutor's very next message.
+
+More than one action is often acceptable: experienced tutors can reasonably disagree. Mark an action acceptable if an experienced tutor could sensibly choose it at this exact moment. Mark it not acceptable if it would not fit what the student just said, for example:
+- AFFIRM when the student's answer is wrong
+- CORRECT or EXPLAIN when the student could still work it out with a small nudge, so the step would be given away too early
+- PROBE when the student's thinking is already clear and asking again adds nothing
+- ENCOURAGE alone when the student needs mathematical help to move on
+
+The conversation may be an excerpt and may not show the original question. Judge from what is visible; do not invent missing details. If the student's message is too unclear to interpret, actions that need a clear diagnosis (CORRECT, AFFIRM) are usually not acceptable.
+
+Actions:
+{action_definitions}
+
+For every action, first write one sentence of reasoning about this specific moment, then decide true or false. Return JSON with one key per action, each holding "reasoning" and "acceptable".
