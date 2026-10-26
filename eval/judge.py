@@ -21,7 +21,7 @@ from typing import Optional, Sequence, Union
 
 from agents.prompting import load_prompt
 from eval.kappa import DIMENSIONS, SCALES
-from llm import LLM
+from llm import LLM, BudgetExceeded, LLMError
 
 
 class JudgeError(RuntimeError):
@@ -141,15 +141,28 @@ def _judge_to_file(llm: LLM, items, out_path, key_fields: Sequence[str], dimensi
                 done.add(tuple(row[k] for k in key_fields) + (row["prompt_version"],))
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    new = 0
+    new = failed = 0
     with open(out_path, "a", encoding="utf-8") as f:
         for ids, inputs, extra in items:
             if tuple(ids[k] for k in key_fields) + (version,) in done:
                 continue
-            row = {**ids, "prompt_version": version, "judge": judge(llm, **inputs, dimensions=dimensions), **extra}
+            try:
+                ratings = judge(llm, **inputs, dimensions=dimensions)
+            except BudgetExceeded:
+                raise  # out of money: stop; judged lines are already saved
+            except (JudgeError, LLMError) as error:
+                # Not written, so the next run retries it.
+                failed += 1
+                print(f"  judge failed on {ids}: {type(error).__name__}: {str(error)[:150]}")
+                continue
+            row = {**ids, "prompt_version": version, "judge": ratings, **extra}
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
             f.flush()  # each line is paid for; keep it even if a later call crashes
             new += 1
+            if new % 10 == 0:
+                print(f"  judged {new} so far (${getattr(llm, 'usage', {}).get('cost_usd', 0.0):.4f})", flush=True)
+    if failed:
+        print(f"  {failed} response(s) could not be judged; rerun to retry them")
     return new
 
 
@@ -191,3 +204,71 @@ def run_judge_results(
         if r.get("response")
     )
     return _judge_to_file(llm, items, out_path, RESULTS_KEY, dimensions)
+
+
+def main() -> None:
+    """Command-line entry point.
+
+    1. Validate the judge against MRBench's human ratings (do this first):
+         python -m eval.judge mrbench --split train --n 100 --out results/judge_mrbench_train.jsonl
+         python -m eval.kappa results/judge_mrbench_train.jsonl
+    2. Judge TutorState's responses from a runner results file:
+         python -m eval.judge results --results results/run.jsonl \\
+             --bridge data/Bridge/bridge_data_size_441/441_test.json --out results/judge_run.jsonl
+         python -m eval.report --results results/run.jsonl --bridge ... --judge results/judge_run.jsonl
+
+    Uses the group LLM (llm.get_llm); --model swaps the judge model, e.g. a
+    different family from the agents to avoid self-preference. Re-running the
+    same command skips responses already judged with the current prompt.
+    """
+    import argparse
+    import random
+
+    from eval.load import (
+        load_bridge_contexts,
+        load_mrbench_contexts,
+        load_mrbench_examples,
+        load_results,
+    )
+    from llm import get_llm
+
+    parser = argparse.ArgumentParser(description="LLM judge on the MRBench dimensions")
+    parser.add_argument("--model", help="OpenRouter model slug; default is the group model in llm.py")
+    parser.add_argument("--effort", help="reasoning effort; default is the group setting in llm.py")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    mrbench = sub.add_parser("mrbench", help="judge MRBench's own responses, to compare with human ratings")
+    mrbench.add_argument("--split", default="train", choices=["train", "validation", "test"])
+    mrbench.add_argument("--n", type=int, default=None, help="random sample size (default: all)")
+    mrbench.add_argument("--seed", type=int, default=0, help="sampling seed, so the sample is reproducible")
+    mrbench.add_argument("--out", required=True)
+
+    results = sub.add_parser("results", help="judge TutorState responses from a runner results file")
+    results.add_argument("--results", required=True)
+    source = results.add_mutually_exclusive_group(required=True)
+    source.add_argument("--bridge", help="BRIDGE split file the results were run on")
+    source.add_argument("--mrbench-split", choices=["train", "validation", "test"])
+    results.add_argument("--out", required=True)
+
+    args = parser.parse_args()
+    overrides = {k: v for k, v in (("model", args.model), ("effort", args.effort)) if v}
+    llm = get_llm(**overrides)
+    print(f"judge model: {llm.model} (effort={llm.effort}), prompt version {prompt_version()}")
+
+    if args.command == "mrbench":
+        examples = load_mrbench_examples(args.split)
+        if args.n is not None and args.n < len(examples):
+            examples = random.Random(args.seed).sample(examples, args.n)
+        new = run_judge(llm, examples, args.out)
+    else:
+        rows = load_results(args.results)
+        contexts = load_bridge_contexts(args.bridge) if args.bridge else load_mrbench_contexts(args.mrbench_split)
+        new = run_judge_results(llm, rows, contexts, args.out)
+
+    usage = llm.usage
+    print(f"judged {new} new response(s) -> {args.out}")
+    print(f"LLM usage: {usage['calls']} calls, ${usage['cost_usd']:.4f}")
+
+
+if __name__ == "__main__":
+    main()

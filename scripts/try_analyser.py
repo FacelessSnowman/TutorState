@@ -1,7 +1,7 @@
 """Run the analyser on BRIDGE *train* cases with a real LLM and compare with the experts.
 
-    pip install anthropic
-    set ANTHROPIC_API_KEY=...            (PowerShell: $env:ANTHROPIC_API_KEY="...")
+    pip install -r requirements.txt
+    put OPENROUTER_API_KEY=... in .env   (gitignored; never commit the key)
     python scripts/try_analyser.py --n 20
 
 Prints each case with the analyser's label next to the expert label(s), then the
@@ -18,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from agents.analyser import analyse
-from llm import ClaudeLLM
+from llm import get_llm
 
 TRAIN = Path(__file__).resolve().parent.parent / "data/Bridge/bridge_data_size_142/142_train.json"
 
@@ -29,7 +29,7 @@ def main():
     args = parser.parse_args()
 
     cases = json.loads(TRAIN.read_text(encoding="utf-8"))[: args.n]
-    llm = ClaudeLLM()
+    llm = get_llm()
     hits, confusions = 0, Counter()
 
     for case in cases:

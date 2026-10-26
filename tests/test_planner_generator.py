@@ -43,7 +43,18 @@ def test_planner_sees_state_but_no_gold_labels():
     user = llm.calls[0]["user"]
     assert "Diagnosis of the student's latest message" in user
     assert "Student state across the session" in user
-    assert CASE["expected"]["expert_response"] not in user
+    for expert in CASE["expected"]["expert_responses"]:
+        assert expert not in user
+
+
+def test_memory_lists_render_as_nested_bullets():
+    llm = ScriptedLLM([{"reason": "r", "action": "EXPLAIN"}])
+    repeated = next(c for c in iter_mock_cases() if c["name"] == "guess_area_repeated")
+    plan(llm, **repeated["inputs"])
+    user = llm.calls[0]["user"]
+    assert "- misconception history:\n  - misconception: gives a side length" in user
+    assert "status: recurring" in user
+    assert "[{" not in user
 
 
 def test_generator_ablation_only_changes_sections():
