@@ -98,6 +98,8 @@ def leakage_by_condition(results: Sequence[dict], contexts: dict) -> dict:
     """
     report = {}
     for row in results:
+        if row.get("error"):  # failed case: no response, counted in failure_rate instead
+            continue
         context = contexts[row["case_id"]]
         flagged = reveals_answer(
             row.get("response") or "", context["ground_truth_solution"], str(context["conversation_history"])

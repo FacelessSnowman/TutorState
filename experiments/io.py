@@ -24,6 +24,10 @@ def completed_keys(
 
             row = json.loads(line)
 
+            # Failed rows are not "done": rerunning retries them.
+            if row.get("error"):
+                continue
+
             done.add(
                 (
                     row["case_id"],

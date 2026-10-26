@@ -29,7 +29,15 @@ REQUIRED_KEYS = ("case_id", "condition", "seed")
 
 
 def load_results(path) -> list[dict]:
-    rows, seen = [], set()
+    """One row per case/condition/seed.
+
+    The runner writes a row with an "error" field when a case fails and
+    retries it on the next run, so a key can appear as one or more failures
+    followed by a success. The latest row wins; a key that never succeeded
+    keeps its error row so failure_rate() can count it. Two successful rows
+    for one key is still an error.
+    """
+    rows: dict = {}
     with open(path, encoding="utf-8") as f:
         for line_no, line in enumerate(f, 1):
             if not line.strip():
@@ -39,11 +47,32 @@ def load_results(path) -> list[dict]:
             if missing:
                 raise ValueError(f"{path}:{line_no} is missing {missing}")
             key = (row["case_id"], row["condition"], row["seed"])
-            if key in seen:
+            previous = rows.get(key)
+            if previous is not None and not previous.get("error") and not row.get("error"):
                 raise ValueError(f"{path}:{line_no} duplicates case/condition/seed {key}")
-            seen.add(key)
-            rows.append(row)
-    return rows
+            if previous is None or previous.get("error"):
+                rows[key] = row
+    return list(rows.values())
+
+
+def failure_rate(results) -> dict[str, dict]:
+    """{condition: {"n", "failed", "rate", "by_type"}} over rows still failed after retries.
+
+    Failed rows have no analysis/planner/response, so the scorers skip them;
+    report this alongside every score, since failures may not be random
+    (e.g. the planner failing more often on unclear student messages).
+    """
+    report: dict = {}
+    for row in results:
+        stats = report.setdefault(row["condition"], {"n": 0, "failed": 0, "by_type": {}})
+        stats["n"] += 1
+        if row.get("error"):
+            stats["failed"] += 1
+            kind = row["error"].get("type", "unknown")
+            stats["by_type"][kind] = stats["by_type"].get(kind, 0) + 1
+    for stats in report.values():
+        stats["rate"] = stats["failed"] / stats["n"]
+    return report
 
 
 def load_bridge_gold(path) -> dict[str, dict]:

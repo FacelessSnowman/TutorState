@@ -1,0 +1,16 @@
+# Install with:  pip install -r requirements.txt   (Python 3.10+)
+
+# LLM access - every agent, run and judge goes through OpenRouter (llm.get_llm)
+openai>=3.37
+
+# Evaluation (Track D)
+scikit-learn>=1.9
+numpy>=2.4
+matplotlib>=3.11
+
+# Tests
+pytest>=9.1
+
+# Optional, not needed by the group pipeline: only for llm.ClaudeLLM with your own
+# Anthropic API key (a Claude Pro subscription does not include API access).
+# anthropic

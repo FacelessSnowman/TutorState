@@ -49,16 +49,29 @@ def format_history(history: Sequence[Turn]) -> str:
 
 
 def _format_value(value) -> str:
-    if value is None:
+    if value is None or value == []:
         return "none"
     if isinstance(value, bool):
         return "yes" if value else "no"
+    if isinstance(value, dict):
+        return ", ".join(f"{k.replace('_', ' ')}: {_format_value(v)}" for k, v in value.items())
     return str(value)
 
 
 def format_fields(fields: dict) -> str:
-    """Render an analysis/memory dict as bullets. Generic so schema renames don't break it."""
-    return "\n".join(f"- {key.replace('_', ' ')}: {_format_value(value)}" for key, value in fields.items())
+    """Render an analysis/memory dict as bullets. Generic so schema renames don't break it.
+
+    Lists (e.g. memory's misconception_history) become nested bullets.
+    """
+    lines = []
+    for key, value in fields.items():
+        label = key.replace("_", " ")
+        if isinstance(value, list) and value:
+            lines.append(f"- {label}:")
+            lines.extend(f"  - {_format_value(item)}" for item in value)
+        else:
+            lines.append(f"- {label}: {_format_value(value)}")
+    return "\n".join(lines)
 
 
 def build_user_prompt(

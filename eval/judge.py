@@ -21,7 +21,7 @@ from typing import Optional, Sequence, Union
 from agents.prompting import load_prompt
 from eval.cache import run_cached
 from eval.kappa import DIMENSIONS, SCALES
-from llm import LLM
+from llm import LLM, LLMError
 
 
 class JudgeError(RuntimeError):
@@ -135,6 +135,8 @@ def _judge_to_file(llm: LLM, items, out_path, key_fields: Sequence[str], dimensi
     return run_cached(
         items, out_path, key_fields, prompt_version(dimensions),
         lambda inputs: {"judge": judge(llm, **inputs, dimensions=dimensions)},
+        skip_errors=(JudgeError, LLMError),
+        usage=getattr(llm, "usage", None),
     )
 
 

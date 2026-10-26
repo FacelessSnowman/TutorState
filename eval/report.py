@@ -25,6 +25,7 @@ from typing import Optional, Sequence
 from eval.diagnosis import compare_diagnosis, score_diagnosis
 from eval.kappa import BINARY, DIMENSIONS, to_score
 from eval.leakage import leakage_by_condition
+from eval.load import failure_rate
 from eval.metrics import bootstrap_ci
 from eval.strategy import compare_strategy, score_strategy
 
@@ -134,6 +135,14 @@ def build_report(
     out_dir: Optional[Path] = None,
 ) -> dict:
     report: dict = {}
+    report["failures"] = failure_rate(results)
+    print("\n== Failed cases (after retries; excluded from every score below) ==")
+    print(f"{'condition':<16}{'rows':>6}{'failed':>8}{'rate':>8}  by type")
+    for condition in order:
+        s = report["failures"].get(condition)
+        if s:
+            print(f"{condition:<16}{s['n']:>6}{s['failed']:>8}{s['rate']:>8.1%}  {s['by_type'] or '-'}")
+
     if gold is not None:
         report["diagnosis"] = score_diagnosis(results, gold)
         report["strategy"] = score_strategy(results, gold, acceptable)

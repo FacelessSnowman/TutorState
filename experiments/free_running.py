@@ -1,7 +1,7 @@
 import copy
 
 from experiments.adapters import run_student_simulator
-from experiments.turn import run_turn
+from experiments.turn import build_prior_memory, run_turn
 
 
 def run_free_running_case(
@@ -17,8 +17,14 @@ def run_free_running_case(
     """
     history = copy.deepcopy(case["history"])
 
-    previous_memory = None
-    trajectory = []
+    # Start from the memory the dataset's earlier student turns imply.
+    previous_memory, trajectory = build_prior_memory(
+        llm=llm,
+        case=case,
+        history=history,
+        condition_name=condition_name,
+        memory_profile=memory_profile,
+    )
     final_result = None
 
     for step in range(max_turns):
