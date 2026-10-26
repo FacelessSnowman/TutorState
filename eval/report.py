@@ -97,6 +97,9 @@ def _fmt_ci(ci) -> str:
 
 def _print_scores(title: str, report: dict, order: Sequence[str]) -> None:
     print(f"\n== {title} ==")
+    if not report:
+        print("(nothing to score: no condition in this file produced this output, e.g. baseline only)")
+        return
     print(f"{'condition':<16}{'cases':>6}{'seeds':>6}{'any_match':>11}{'95% CI':>18}{'frac':>8}{'macroF1':>9}")
     for condition in order:
         if condition not in report:
@@ -184,6 +187,7 @@ def build_report(
 
 
 def main() -> None:
+    from eval.acceptable import load_acceptable
     from eval.load import load_bridge_gold, load_mrbench_contexts, load_results
 
     parser = argparse.ArgumentParser(description="Track D evaluation report")
@@ -192,7 +196,7 @@ def main() -> None:
     source.add_argument("--bridge", help="Bridge split file the results were run on")
     source.add_argument("--mrbench-split", choices=["train", "validation", "test"])
     parser.add_argument("--dataset", help="only use results rows with this dataset value, e.g. bridge142")
-    parser.add_argument("--acceptable", help="JSON {case_id: [extra acceptable actions]}")
+    parser.add_argument("--acceptable", help="acceptable-action sets: eval.acceptable output (.jsonl) or a JSON dict")
     parser.add_argument("--judge", help="run_judge_results output (JSONL)")
     parser.add_argument("--order", help="comma-separated condition order, e.g. baseline,analyser,memory,full")
     parser.add_argument("--out-dir", help="save report.json and confusion matrix PNGs here")
@@ -204,7 +208,7 @@ def main() -> None:
         if not results:
             raise SystemExit(f"no results rows with dataset={args.dataset!r}")
     order = args.order.split(",") if args.order else list(dict.fromkeys(r["condition"] for r in results))
-    acceptable = json.loads(Path(args.acceptable).read_text(encoding="utf-8")) if args.acceptable else None
+    acceptable = load_acceptable(args.acceptable) if args.acceptable else None
     judge_rows = None
     if args.judge:
         with open(args.judge, encoding="utf-8") as f:

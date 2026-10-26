@@ -222,7 +222,10 @@ vs "adds denominators") as different, and hint counting is a keyword guess.
 | `diagnosis.py` | Analyser `error_type` vs BRIDGE `e_clean` |
 | `strategy.py` | Planner `action` vs BRIDGE `z_what_clean`; optional lenient sets of acceptable actions |
 | `leakage.py` | Does a response contain the final answer? MRBench only, since BRIDGE has no solutions |
-| `judge.py` | LLM ratings on the 8 MRBench dimensions, cached by prompt version (`python -m eval.judge`) |
+| `judge.py` | LLM ratings on the 8 MRBench dimensions, cached by prompt version (frozen prompt `d75ce560`) |
+| `run_judge.py` | Judge command line: `python -m eval.run_judge mrbench\|results ... [--dry-run]` |
+| `cache.py` | Shared "never pay twice" file cache for the judge and acceptable sets; skips and retries failed items |
+| `acceptable.py` | LLM-built sets of acceptable actions per case, for lenient strategy scoring |
 | `kappa.py` | Judge-vs-human agreement |
 | `human_sheet.py` | Blind CSV sheets for hand-scoring, and their agreement |
 | `report.py` | One command that prints every table (failures, diagnosis, strategy, comparisons, leakage, judge) and saves `report.json` and charts |
@@ -348,19 +351,36 @@ python scripts/show_results.py results/trial_mr.jsonl --data data/MrBench/test.j
 ```
 Add `--include-solution` to give the tutor the reference solution; it's off by default, and this is a group decision.
 
-### Judge
-```powershell
-# check the judge against MRBench's human ratings first (~$0.06 for 100)
-python -m eval.judge mrbench --split train --n 100 --out results/judge_mrbench_train.jsonl
-python -m eval.kappa results/judge_mrbench_train.jsonl
+### Judge (Track D's `eval.run_judge`)
+The judge prompt is **frozen** at `prompts/judge_system.txt` (version `d75ce560`),
+calibrated against MRBench human ratings. Don't edit it: a new version invalidates
+every cached rating. Per D's validation, use every dimension **except Coherence
+and Humanlikeness**, which agree poorly with humans.
 
-# then judge a run, and include it in the report
-python -m eval.judge results --results results/trial.jsonl `
-    --bridge data/Bridge/bridge_data_size_441/441_validation.json --out results/judge_trial.jsonl
+```powershell
+# preview first: shows the prompt and what would run, costs nothing
+python -m eval.run_judge results --results results/trial.jsonl `
+    --bridge data/Bridge/bridge_data_size_441/441_validation.json --limit 20 --dry-run
+
+# judge a run (prints mean scores per condition), then include it in the report
+python -m eval.run_judge results --results results/trial.jsonl `
+    --bridge data/Bridge/bridge_data_size_441/441_validation.json --limit 1000 --out results/judge_trial.jsonl
 python -m eval.report --results results/trial.jsonl `
     --bridge data/Bridge/bridge_data_size_441/441_validation.json --judge results/judge_trial.jsonl
+
+# validate the judge against MRBench human ratings (prints kappa per dimension)
+python -m eval.run_judge mrbench --split train --limit 50
 ```
-Add `--model <slug>` to use a different judge model, for example one from a different family than the agents.
+
+**Notes:**
+- `--limit` defaults to **20** responses (a random sample fixed by `--seed`), so pass a large `--limit` to judge everything.
+- `--model <slug>` uses a different judge model.
+- Responses that fail are skipped, and retried on the next run.
+
+### Lenient action sets (Track D's `eval.acceptable`)
+An LLM marks which of the 7 actions are reasonable for each case, using only the
+conversation, never the expert's answer. `eval.report --acceptable <file>` then
+adds a lenient strategy score. See the docstring in `eval/acceptable.py`.
 
 ### Try out a single track's agents
 ```powershell

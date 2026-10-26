@@ -76,9 +76,13 @@ def main() -> None:
 
     with open(args.judge_file, encoding="utf-8") as f:
         rows = [json.loads(line) for line in f if line.strip()]
-    print(f"{'dimension':<26}{'n':>5}{'kappa':>8}{'exact':>8}")
-    for dim, stats in agreement_table(rows).items():
-        print(f"{dim:<26}{stats['n']:>5}{stats['kappa']:>8.3f}{stats['exact_agreement']:>8.3f}")
+    # One table per prompt version, so before/after a prompt change are never mixed.
+    for version in dict.fromkeys(r.get("prompt_version") for r in rows):
+        version_rows = [r for r in rows if r.get("prompt_version") == version]
+        print(f"\nprompt version {version} ({len(version_rows)} responses)")
+        print(f"{'dimension':<26}{'n':>5}{'kappa':>8}{'exact':>8}")
+        for dim, stats in agreement_table(version_rows).items():
+            print(f"{dim:<26}{stats['n']:>5}{stats['kappa']:>8.3f}{stats['exact_agreement']:>8.3f}")
 
 
 if __name__ == "__main__":

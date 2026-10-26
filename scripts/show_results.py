@@ -27,7 +27,7 @@ def main():
     parser.add_argument("results", type=Path)
     parser.add_argument("--data", type=Path, required=True, help="data file the run used")
     parser.add_argument("--seed", type=int, default=None, help="only show this seed")
-    parser.add_argument("--judge", type=Path, default=None, help="eval.judge results output, to show ratings")
+    parser.add_argument("--judge", type=Path, default=None, help="eval.run_judge results output, to show ratings")
     args = parser.parse_args()
 
     ratings = {}
